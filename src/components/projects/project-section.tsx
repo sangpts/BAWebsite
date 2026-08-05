@@ -8,7 +8,7 @@ export function ProjectSection({ project }: { project: Project }) {
 			<div className="detail-image image-frame">
 				<Image
 					src={project.image}
-					alt={`${project.title} project screenshot placeholder`}
+					alt={`Neutral placeholder for ${project.title} screenshots`}
 					fill
 					sizes="(max-width: 768px) 100vw, 35vw"
 				/>
@@ -20,6 +20,8 @@ export function ProjectSection({ project }: { project: Project }) {
 					<div>
 						<h3>Business Context</h3>
 						<p>{project.context}</p>
+						<h3>Problem</h3>
+						<p>{project.problem}</p>
 						<h3>My Contribution</h3>
 						<ul>
 							{project.contributions.map((item) => (
@@ -30,6 +32,12 @@ export function ProjectSection({ project }: { project: Project }) {
 					<div>
 						<h3>Solution Delivered</h3>
 						<p>{project.solution}</p>
+						<h3>Evidence planned</h3>
+						<ul className="evidence-list">
+							{project.evidence.map((item) => (
+								<li key={item}>{item}</li>
+							))}
+						</ul>
 						<h3>Technologies</h3>
 						<div className="tags">
 							{project.technologies.map((t) => (
@@ -37,11 +45,16 @@ export function ProjectSection({ project }: { project: Project }) {
 							))}
 						</div>
 						{project.actionUrl ? (
-							<a className="text-link" href={project.actionUrl}>
+							<a
+								className="text-link"
+								href={project.actionUrl}
+								target="_blank"
+								rel="noopener noreferrer"
+							>
 								{project.actionLabel} <ExternalLink size={14} />
 							</a>
 						) : (
-							<span className="coming-soon">Demo Coming Soon</span>
+							<span className="coming-soon">{project.comingSoonLabel}</span>
 						)}
 					</div>
 				</div>

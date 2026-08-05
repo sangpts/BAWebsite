@@ -1,7 +1,4 @@
-import type { LucideIcon } from "lucide-react";
-
-export type LinkItem = { label: string; href: string };
-export type Capability = { title: string; description: string; icon: LucideIcon; tone: string };
+export type Capability = { title: string; description: string };
 export type Experience = {
 	company: string;
 	role: string;
@@ -15,10 +12,13 @@ export type Project = {
 	category: string;
 	description: string;
 	context: string;
+	problem: string;
 	contributions: string[];
 	solution: string;
+	evidence: string[];
 	technologies: string[];
 	image: string;
 	actionLabel: string;
 	actionUrl?: string;
+	comingSoonLabel: string;
 };

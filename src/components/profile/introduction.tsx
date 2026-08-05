@@ -1,11 +1,16 @@
 import { FileText, PenLine, Rocket, Search, UserRound } from "lucide-react";
 import { ButtonLink } from "src/components/ui/button-link";
+import { site } from "src/data/site";
 
 const steps = [
-	[UserRound, "Understand", "Business context, users, and current process"],
-	[Search, "Analyze", "Problems, requirements, and constraints"],
-	[PenLine, "Design", "Workflow, business rules, and system solution"],
-	[Rocket, "Deliver", "Validation, implementation, and adoption"],
+	[UserRound, "Understand", "Understand business context, users, and current processes."],
+	[Search, "Analyze", "Identify problems, requirements, constraints, and conflicting inputs."],
+	[
+		PenLine,
+		"Design",
+		"Define workflows, business rules, data needs, and practical system solutions.",
+	],
+	[Rocket, "Deliver", "Validate, demonstrate, implement, and support operational adoption."],
 ] as const;
 export function Introduction() {
 	return (
@@ -19,8 +24,8 @@ export function Introduction() {
 				</p>
 				<div className="actions">
 					<ButtonLink href="/projects">View Projects</ButtonLink>
-					<ButtonLink href="/documents/phung-tan-sang-cv.pdf" secondary download>
-						<FileText size={16} /> Download CV
+					<ButtonLink href={site.cv} secondary download disabled={!site.cvAvailable}>
+						<FileText size={16} /> {site.cvAvailable ? "Download CV" : "CV Coming Soon"}
 					</ButtonLink>
 				</div>
 			</div>

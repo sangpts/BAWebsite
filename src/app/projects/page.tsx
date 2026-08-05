@@ -2,8 +2,10 @@ import { Download } from "lucide-react";
 import { SiteFooter } from "src/components/layout/site-footer";
 import { SiteHeader } from "src/components/layout/site-header";
 import { ProjectSection } from "src/components/projects/project-section";
+import { ProjectsCta } from "src/components/projects/projects-cta";
 import { ButtonLink } from "src/components/ui/button-link";
 import { projects } from "src/data/projects";
+import { site } from "src/data/site";
 export default function ProjectsPage() {
 	return (
 		<main className="paper">
@@ -22,14 +24,15 @@ export default function ProjectsPage() {
 						<ButtonLink href="/" secondary>
 							← Back to Profile
 						</ButtonLink>
-						<ButtonLink href="/documents/phung-tan-sang-cv.pdf" secondary download>
-							<Download size={16} /> Download CV
+						<ButtonLink href={site.cv} secondary download disabled={!site.cvAvailable}>
+							<Download size={16} /> {site.cvAvailable ? "Download CV" : "CV Coming Soon"}
 						</ButtonLink>
 					</div>
 				</section>
 				{projects.map((project) => (
 					<ProjectSection project={project} key={project.id} />
 				))}
+				<ProjectsCta />
 			</div>
 			<SiteFooter />
 		</main>

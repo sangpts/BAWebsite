@@ -15,10 +15,21 @@ export function SiteHeader({ active }: { active: "profile" | "projects" }) {
 				<Link className={active === "projects" ? "active" : ""} href="/projects">
 					Projects
 				</Link>
-				<Link className="download" href={site.cv} download>
-					<span>Download CV</span>
-					<Download size={15} />
-				</Link>
+				{site.cvAvailable ? (
+					<Link className="download" href={site.cv} download>
+						<span>Download CV</span>
+						<Download size={15} />
+					</Link>
+				) : (
+					<span
+						className="download download-disabled"
+						aria-disabled="true"
+						title="Add the latest CV PDF to enable this action"
+					>
+						<span>CV Coming Soon</span>
+						<Download size={15} />
+					</span>
+				)}
 			</nav>
 		</header>
 	);

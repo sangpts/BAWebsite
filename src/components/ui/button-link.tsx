@@ -5,20 +5,25 @@ export function ButtonLink({
 	children,
 	secondary = false,
 	download = false,
+	disabled = false,
 }: {
 	href: string;
 	children: ReactNode;
 	secondary?: boolean;
 	download?: boolean;
+	disabled?: boolean;
 }) {
+	const className = `button ${secondary ? "button-secondary" : ""} ${disabled ? "button-disabled" : ""}`;
+	if (disabled)
+		return (
+			<span className={className} aria-disabled="true" title="This file is not available yet">
+				{children}
+			</span>
+		);
 	return (
-		<Link
-			href={href}
-			download={download || undefined}
-			className={`button ${secondary ? "button-secondary" : ""}`}
-		>
+		<Link href={href} download={download || undefined} className={className}>
 			{children}
-			<span aria-hidden>→</span>
+			{!download && <span aria-hidden>→</span>}
 		</Link>
 	);
 }

@@ -22,8 +22,10 @@ body {
 	background: #eef2f6;
 	color: var(--ink);
 	font-family: var(--font-sans), Arial, sans-serif;
-	font-size: 15px;
+	font-size: 16px;
 	line-height: 1.55;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
 }
 a {
 	color: inherit;
@@ -112,10 +114,10 @@ nav > a.active:after {
 	color: #fff;
 }
 .page-content {
-	padding: 40px 34px 20px;
+	padding: 50px 40px 24px;
 }
 .page-content > section {
-	margin-bottom: 34px;
+	margin-bottom: 42px;
 }
 .hero {
 	display: grid;
@@ -134,7 +136,7 @@ nav > a.active:after {
 .projects-intro h1 {
 	max-width: 650px;
 	margin: 8px 0 14px;
-	font: 700 31px / 1.18 var(--font-serif);
+	font: 700 46px / 1.12 var(--font-serif);
 	letter-spacing: -0.025em;
 }
 .hero-copy > p:not(.eyebrow),
@@ -324,13 +326,13 @@ nav > a.active:after {
 }
 .capability h3 {
 	font-family: var(--font-sans);
-	font-size: 11px;
+	font-size: 12px;
 }
 .capability p {
 	margin: 5px 0 0;
 	color: #58677d;
-	font-size: 10px;
-	line-height: 1.45;
+	font-size: 11px;
+	line-height: 1.55;
 }
 .timeline {
 	padding: 8px 20px;
@@ -342,7 +344,7 @@ nav > a.active:after {
 	grid-template-columns: 150px minmax(0, 1fr) 290px;
 	gap: 20px;
 	position: relative;
-	padding: 14px 0;
+	padding: 17px 0;
 }
 .timeline article:not(:last-child) {
 	border-bottom: 1px solid #e8edf3;
@@ -372,19 +374,19 @@ nav > a.active:after {
 .period {
 	padding-right: 17px;
 	color: #465674;
-	font-size: 11px;
+	font-size: 12px;
 	text-align: right;
 }
 .timeline h4 {
 	margin: 0;
 	color: #516079;
-	font-size: 11px;
+	font-size: 12px;
 	font-weight: 500;
 }
 .timeline p {
 	margin: 3px 0 0;
 	color: #4c5c74;
-	font-size: 11px;
+	font-size: 12px;
 	line-height: 1.45;
 }
 .about-connect {
@@ -393,7 +395,7 @@ nav > a.active:after {
 	gap: 24px;
 }
 .about-connect article {
-	padding: 16px 22px;
+	padding: 20px 24px;
 	border: 1px solid var(--border);
 	border-radius: 8px;
 	background: linear-gradient(135deg, #fff, #f8fbff);
@@ -401,12 +403,12 @@ nav > a.active:after {
 .about-connect p {
 	margin: 7px 0;
 	color: #4d5c73;
-	font-size: 11px;
+	font-size: 12px;
 	line-height: 1.45;
 }
 .connect-links {
 	display: grid;
-	grid-template-columns: repeat(3, 1fr);
+	grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
 	gap: 9px;
 	margin-top: 12px;
 }
@@ -578,7 +580,7 @@ footer {
 	}
 	.hero h1,
 	.projects-intro h1 {
-		font-size: 25px;
+		font-size: 32px;
 	}
 	.project-grid,
 	.capability-grid,
@@ -643,4 +645,43 @@ footer {
 		transition: none;
 		animation: none;
 	}
+}
+
+.button-disabled,
+.download-disabled {
+	cursor: not-allowed;
+	opacity: 0.62;
+}
+.button-disabled:hover,
+.download-disabled:hover {
+	color: var(--navy);
+	background: #fff;
+}
+.phone-line {
+	display: flex;
+	align-items: center;
+	gap: 7px;
+	color: var(--navy);
+}
+.availability-note {
+	margin-top: 10px;
+	font-style: italic;
+}
+.evidence-list {
+	columns: 1;
+}
+.projects-cta {
+	padding: 24px;
+	text-align: center;
+	border: 1px solid var(--border);
+	border-radius: 8px;
+	background: var(--soft);
+}
+.projects-cta h2 {
+	max-width: 720px;
+	margin: 0 auto;
+	font: 700 18px / 1.4 var(--font-serif);
+}
+.projects-cta .actions {
+	justify-content: center;
 }
