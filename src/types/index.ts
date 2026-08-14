@@ -4,6 +4,7 @@ export type Experience = {
 	role: string;
 	period: string;
 	summary: string;
+	highlights: string[];
 	tags: string[];
 };
 export type Project = {
