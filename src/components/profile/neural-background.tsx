@@ -82,7 +82,7 @@ export function NeuralBackground() {
 					if (distance >= CONNECTION_DISTANCE) continue;
 
 					const opacity = (1 - distance / CONNECTION_DISTANCE) * 0.48;
-					context.strokeStyle = `rgba(123, 184, 255, ${opacity})`;
+					context.strokeStyle = `rgba(55, 65, 81, ${opacity * 0.48})`;
 					context.beginPath();
 					context.moveTo(start.x, start.y);
 					context.lineTo(end.x, end.y);
@@ -93,15 +93,15 @@ export function NeuralBackground() {
 			for (const neuron of neurons) {
 				const pulse = reducedMotion ? 0.84 : 0.76 + Math.sin(time * 0.00375 + neuron.phase) * 0.2;
 				const glow = context.createRadialGradient(neuron.x, neuron.y, 0, neuron.x, neuron.y, neuron.radius * 6.25);
-				glow.addColorStop(0, `rgba(207, 231, 255, ${pulse})`);
-				glow.addColorStop(0.26, `rgba(102, 169, 255, ${pulse * 0.7})`);
-				glow.addColorStop(1, "rgba(64, 137, 242, 0)");
+				glow.addColorStop(0, `rgba(55, 65, 81, ${pulse * 0.52})`);
+				glow.addColorStop(0.26, `rgba(100, 116, 139, ${pulse * 0.3})`);
+				glow.addColorStop(1, "rgba(148, 163, 184, 0)");
 				context.fillStyle = glow;
 				context.beginPath();
 				context.arc(neuron.x, neuron.y, neuron.radius * 6.25, 0, Math.PI * 2);
 				context.fill();
 
-				context.fillStyle = `rgba(220, 239, 255, ${Math.min(1, pulse + 0.16)})`;
+				context.fillStyle = `rgba(31, 41, 55, ${Math.min(0.82, pulse * 0.78)})`;
 				context.beginPath();
 				context.arc(neuron.x, neuron.y, neuron.radius, 0, Math.PI * 2);
 				context.fill();

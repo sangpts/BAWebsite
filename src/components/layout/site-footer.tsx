@@ -1,4 +1,5 @@
 import { site } from "src/data/site";
+
 export function SiteFooter() {
 	return (
 		<footer>

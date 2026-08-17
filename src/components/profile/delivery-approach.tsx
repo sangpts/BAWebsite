@@ -23,6 +23,8 @@ export function DeliveryApproach() {
 				</div>
 
 				<div className="delivery-core">
+					<span className="delivery-orbit delivery-orbit--outer" aria-hidden="true" />
+					<span className="delivery-orbit delivery-orbit--inner" aria-hidden="true" />
 					<div className="delivery-core__inner">
 						<UsersRound size={42} strokeWidth={1.65} aria-hidden="true" />
 						<strong>Business Value Delivery</strong>

@@ -61,7 +61,6 @@ export function CoreCapabilities() {
 						<article className="capability-group" key={group.title}>
 							<Icon className="capability-group__icon" aria-hidden="true" />
 							<h3>{group.title}</h3>
-							<span className="capability-group__rule" aria-hidden="true" />
 							<ul>
 								{group.items.map((item) => (
 									<li key={item}>{item}</li>

@@ -1,4 +1,5 @@
 import type { Project } from "src/types";
+
 export const projects: Project[] = [
 	{
 		id: "corporate-website",

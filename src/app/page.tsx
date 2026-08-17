@@ -1,4 +1,3 @@
-import { SiteFooter } from "src/components/layout/site-footer";
 import { SiteHeader } from "src/components/layout/site-header";
 import { SiteIdentityBanner } from "src/components/layout/site-identity-banner";
 import { CoreCapabilities } from "src/components/profile/core-capabilities";
@@ -35,7 +34,6 @@ export default function ProfilePage() {
 					<ProfileProjectsCta />
 				</RevealOnScroll>
 			</div>
-			<SiteFooter />
 		</main>
 	);
 }

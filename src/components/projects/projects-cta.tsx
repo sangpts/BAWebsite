@@ -1,33 +1,27 @@
-import { Download, Linkedin, Mail } from "lucide-react";
-import Link from "next/link";
-import { ButtonLink } from "src/components/ui/button-link";
+import { ArrowRight, Mail } from "lucide-react";
 import { site } from "src/data/site";
+
 export function ProjectsCta() {
 	return (
-		<section className="projects-cta">
-			<h2>
-				Looking for a Business Analyst who can connect business needs with practical implementation?
-			</h2>
-			<div className="actions">
-				<a className="button" href={`mailto:${site.email}`}>
-					<Mail size={16} /> Email Me
+		<section className="work-closing">
+			<div className="work-closing__visual" aria-hidden="true">
+				<span className="work-closing__line work-closing__line--one" />
+				<span className="work-closing__line work-closing__line--two" />
+				<span className="work-closing__node work-closing__node--one">01</span>
+				<span className="work-closing__node work-closing__node--two">02</span>
+			</div>
+			<div className="work-closing__copy">
+				<p>One connected approach</p>
+				<h2>Two contexts. One mindset.</h2>
+				<span>
+					Understanding people, processes, and systems to create solutions that work in the real
+					world.
+				</span>
+				<a href={`mailto:${site.email}`}>
+					<Mail aria-hidden="true" size={17} strokeWidth={1.7} />
+					Let&apos;s connect
+					<ArrowRight aria-hidden="true" size={18} strokeWidth={1.7} />
 				</a>
-				{site.linkedin && (
-					<a
-						className="button button-secondary"
-						href={site.linkedin}
-						target="_blank"
-						rel="noopener noreferrer"
-					>
-						<Linkedin size={16} /> View LinkedIn
-					</a>
-				)}
-				<ButtonLink href={site.cv} secondary download disabled={!site.cvAvailable}>
-					<Download size={16} /> {site.cvAvailable ? "Download CV" : "CV Coming Soon"}
-				</ButtonLink>
-				<Link className="text-link" href="/">
-					← Back to Profile
-				</Link>
 			</div>
 		</section>
 	);

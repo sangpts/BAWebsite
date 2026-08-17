@@ -2,7 +2,6 @@ export const profileContent = {
 	hero: {
 		eyebrow: "Business Analysis · Systems · Digital Solutions",
 		headline: "Turning business needs into practical digital solutions",
-		body: "I translate business processes into clear requirements and practical digital systems, working across business and technical teams from discovery through implementation.",
 	},
 	workApproach: [
 		{ title: "Understand", description: "Business context, users, and current processes." },
@@ -60,7 +59,7 @@ export const profileContent = {
 				title: "Enterprise Resource Planning",
 				description:
 					"Integrated management of finance, purchasing, inventory, production, and cross-functional operations.",
-				image: "/images/domains/erp.png",
+				image: "/images/domains/erp-gold.png",
 				imageAlt:
 					"ERP illustration connecting sales, purchasing, inventory, production, accounting, and reporting.",
 				href: "/projects#enterprise-system",
@@ -70,9 +69,9 @@ export const profileContent = {
 				title: "Manufacturing Execution System",
 				description:
 					"Real-time production execution, quality coordination, traceability, and shop-floor performance visibility.",
-				image: "/images/domains/mes.png",
+				image: "/images/domains/mes-connected-machining-gold.png",
 				imageAlt:
-					"MES illustration with a production dashboard, connected machines, work orders, and quality checkpoints.",
+					"MES-connected machining facility with automated equipment, robotic handling, and a live production dashboard.",
 				href: "/projects#enterprise-system",
 			},
 			{
@@ -80,7 +79,7 @@ export const profileContent = {
 				title: "Warehouse Management System",
 				description:
 					"Controlled inventory movement and warehouse visibility from receiving and put-away through shipping.",
-				image: "/images/domains/wms-warehouse.png",
+				image: "/images/domains/wms-warehouse-operations-gold.png",
 				imageAlt:
 					"WMS illustration showing receiving, put-away, picking, packing, shipping, and inventory visibility.",
 				href: "/projects#enterprise-system",
@@ -88,13 +87,8 @@ export const profileContent = {
 		],
 	},
 	projectsCta: {
-		eyebrow: "Next — Selected Work",
-		headline: ["The profile gives the context.", "The projects show the work."],
-		summary:
-			"Explore selected case studies across ERP, MES, warehouse operations, system integration, and cross-functional delivery.",
-		topics: ["Requirements", "Process Design", "Implementation", "Go-Live"],
-		nextLabel: "Next Page",
-		nextPage: "Projects",
+		eyebrow: "Selected Work",
+		headline: "See how requirements become working systems.",
 		actionLabel: "Explore Projects",
 	},
 	selectedProjectSlugs: ["corporate-website", "enterprise-system"],
