@@ -21,16 +21,16 @@ export default function ProfilePage() {
 					</RevealOnScroll>
 				</div>
 				<SiteIdentityBanner />
-				<RevealOnScroll delay={50} className="domain-experience-shell" fullBleed>
+				<RevealOnScroll delay={80} className="domain-experience-shell" fullBleed>
 					<DomainExperience />
 				</RevealOnScroll>
-				<RevealOnScroll delay={60}>
+				<RevealOnScroll delay={110}>
 					<CoreCapabilities />
 				</RevealOnScroll>
-				<RevealOnScroll delay={60}>
+				<RevealOnScroll delay={140}>
 					<ExperienceTimeline />
 				</RevealOnScroll>
-				<RevealOnScroll delay={60} className="profile-projects-cta-shell" fullBleed>
+				<RevealOnScroll delay={170} className="profile-projects-cta-shell" fullBleed>
 					<ProfileProjectsCta />
 				</RevealOnScroll>
 			</div>

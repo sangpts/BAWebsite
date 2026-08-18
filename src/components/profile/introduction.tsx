@@ -10,7 +10,7 @@ export function Introduction() {
 						alt="Phung Tan Sang"
 						fill
 						priority
-						sizes="(min-width: 1100px) 140px, 44vw"
+						sizes="150px"
 						src="/images/profile/portrait.jpg"
 					/>
 				</figure>
