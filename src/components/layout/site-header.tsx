@@ -115,7 +115,7 @@ export function SiteHeader({ active }: { active: "profile" | "projects" }) {
 						</div>
 						{site.cvAvailable ? (
 							<Link className="download header-cv" href={site.cv} download>
-								<span>Download CV</span>
+								<span>DOWNLOAD CV</span>
 								<Download size={15} />
 							</Link>
 						) : (

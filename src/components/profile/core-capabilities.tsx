@@ -25,7 +25,7 @@ export function CoreCapabilities() {
 				<h2
 					className="section-display-title"
 					id="core-capabilities-title"
-					style={{ color: "#111827", fontFamily: '"Times New Roman", Times, serif' }}
+					style={{ color: "#111827", fontFamily: "var(--font-site), Arial, sans-serif" }}
 				>
 					Core <span style={{ color: "#111827" }}>Capabilities</span>
 				</h2>

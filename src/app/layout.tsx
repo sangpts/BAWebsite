@@ -1,5 +1,13 @@
 import type { Metadata } from "next";
+import { Lato } from "next/font/google";
 import "./globals.css";
+
+const siteFont = Lato({
+	weight: ["300", "400", "700", "900"],
+	subsets: ["latin", "latin-ext"],
+	display: "swap",
+	variable: "--font-site",
+});
 
 export const metadata: Metadata = {
 	title: "Phung Tan Sang - Portfolio",
@@ -12,7 +20,7 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
 	return (
-		<html lang="en">
+		<html className={siteFont.variable} lang="en">
 			<body>{children}</body>
 		</html>
 	);

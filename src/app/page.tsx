@@ -21,7 +21,7 @@ export default function ProfilePage() {
 					</RevealOnScroll>
 				</div>
 				<SiteIdentityBanner />
-				<RevealOnScroll delay={50}>
+				<RevealOnScroll delay={50} className="domain-experience-shell" fullBleed>
 					<DomainExperience />
 				</RevealOnScroll>
 				<RevealOnScroll delay={60}>

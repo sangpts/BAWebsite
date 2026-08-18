@@ -12,8 +12,7 @@ export const site = {
 	cvAvailable: true,
 	location: "Ho Chi Minh City, Vietnam",
 	identityBanner: {
-		quote:
-			"Building systems around real business operations — with connected data, clear visibility, and better decisions.",
+		quote: "Building systems around real business operations — with connected data and clear visibility.",
 		name: "Phung Tan Sang",
 		role: "Business Analyst",
 		experience: "3+ Years Experience",
