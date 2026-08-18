@@ -15,7 +15,6 @@ export function DomainExperience() {
 					<h2 className="section-display-title">
 						{content.title} <span>{content.titleAccent}</span>
 					</h2>
-					<span className="domain-intro-divider" aria-hidden="true" />
 					<p className="domain-summary">{content.intro}</p>
 				</header>
 

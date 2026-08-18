@@ -1,7 +1,6 @@
 "use client";
 
-import { useId } from "react";
-import { useState } from "react";
+import { useEffect, useId, useRef, useState } from "react";
 import { Tag } from "src/components/ui/tag";
 import { experience } from "src/data/experience";
 
@@ -33,7 +32,25 @@ export function ExperienceTimeline() {
 
 function ExperienceCard({ item }: { item: (typeof experience)[number] }) {
 	const [isOpen, setIsOpen] = useState(false);
+	const [contentHeight, setContentHeight] = useState(0);
 	const contentId = useId();
+	const contentRef = useRef<HTMLDivElement>(null);
+
+	useEffect(() => {
+		const content = contentRef.current;
+		if (!content) return;
+
+		const updateHeight = () => {
+			setContentHeight(isOpen ? content.scrollHeight : 0);
+		};
+
+		updateHeight();
+		if (!isOpen) return;
+
+		const resizeObserver = new ResizeObserver(updateHeight);
+		resizeObserver.observe(content);
+		return () => resizeObserver.disconnect();
+	}, [isOpen]);
 
 	return (
 		<div className={`experience-card${isOpen ? " is-open" : ""}`}>
@@ -54,8 +71,13 @@ function ExperienceCard({ item }: { item: (typeof experience)[number] }) {
 				<p className="experience-summary">{item.summary}</p>
 			</button>
 
-			<div aria-hidden={!isOpen} className="experience-expanded" id={contentId}>
-				<div className="experience-expanded__inner">
+			<div
+				aria-hidden={!isOpen}
+				className="experience-expanded"
+				id={contentId}
+				style={{ height: `${contentHeight}px` }}
+			>
+				<div className="experience-expanded__inner" ref={contentRef}>
 					<ul className="experience-contributions">
 						{item.highlights.map((highlight) => (
 							<li key={highlight}>{highlight}</li>

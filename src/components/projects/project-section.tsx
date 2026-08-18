@@ -66,9 +66,12 @@ export function ProjectSection({ project, index }: { project: Project; index: nu
 			className={`work-project${config.reverse ? " work-project--reverse" : ""}`}
 			aria-labelledby={`${project.id}-title`}
 		>
-			<div className="work-project__marker" aria-hidden="true">
-				<span>{number}</span>
-			</div>
+			<header className="work-project__header">
+				<span className="work-project__marker" aria-hidden="true">
+					{number}
+				</span>
+				<span>Case study</span>
+			</header>
 
 			<div className="work-project__row">
 				<div className="work-project__copy">
@@ -93,7 +96,7 @@ export function ProjectSection({ project, index }: { project: Project; index: nu
 
 					<details className="work-project__details">
 						<summary>
-							<span>View case study</span>
+							<span>Explore case study</span>
 							<ArrowRight aria-hidden="true" size={18} strokeWidth={1.7} />
 						</summary>
 						<div className="work-project__details-grid">

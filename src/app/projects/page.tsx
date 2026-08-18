@@ -18,14 +18,23 @@ export default function ProjectsPage() {
 				<RevealOnScroll>
 					<section className="projects-editorial__intro">
 						<div className="projects-editorial__intro-copy">
-							<p className="projects-editorial__eyebrow">Selected Work</p>
-							<h1>A journey across two perspectives.</h1>
-							<p className="projects-editorial__subtitle">Inside operations. Outside impact.</p>
+							<p className="projects-editorial__eyebrow">Selected projects / 2023—2026</p>
+							<h1>
+								Business needs,
+								<br />
+								made workable.
+							</h1>
+							<p className="projects-editorial__subtitle">
+								Two perspectives. One practical approach.
+							</p>
 						</div>
-						<p className="projects-editorial__manifesto">
-							I work at the intersection of business, systems, and experience to deliver solutions
-							that are practical, connected, and measurable.
-						</p>
+						<div className="projects-editorial__manifesto">
+							<p>
+								I connect business context, system logic, and user experience to shape solutions
+								that teams can understand, implement, and use.
+							</p>
+							<span>Business analysis · System delivery · Digital experience</span>
+						</div>
 					</section>
 				</RevealOnScroll>
 

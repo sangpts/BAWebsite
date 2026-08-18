@@ -70,7 +70,7 @@ export function NeuralBackground() {
 				}
 			}
 
-			context.lineWidth = 1.05;
+			context.lineWidth = 1.1;
 			for (let first = 0; first < neurons.length; first += 1) {
 				for (let second = first + 1; second < neurons.length; second += 1) {
 					const start = neurons[first];
@@ -81,8 +81,8 @@ export function NeuralBackground() {
 
 					if (distance >= CONNECTION_DISTANCE) continue;
 
-					const opacity = (1 - distance / CONNECTION_DISTANCE) * 0.48;
-					context.strokeStyle = `rgba(55, 65, 81, ${opacity * 0.48})`;
+					const opacity = (1 - distance / CONNECTION_DISTANCE) * 0.42;
+					context.strokeStyle = `rgba(23, 59, 112, ${opacity})`;
 					context.beginPath();
 					context.moveTo(start.x, start.y);
 					context.lineTo(end.x, end.y);
@@ -92,19 +92,23 @@ export function NeuralBackground() {
 
 			for (const neuron of neurons) {
 				const pulse = reducedMotion ? 0.84 : 0.76 + Math.sin(time * 0.00375 + neuron.phase) * 0.2;
-				const glow = context.createRadialGradient(neuron.x, neuron.y, 0, neuron.x, neuron.y, neuron.radius * 6.25);
-				glow.addColorStop(0, `rgba(55, 65, 81, ${pulse * 0.52})`);
-				glow.addColorStop(0.26, `rgba(100, 116, 139, ${pulse * 0.3})`);
-				glow.addColorStop(1, "rgba(148, 163, 184, 0)");
+				const glow = context.createRadialGradient(neuron.x, neuron.y, 0, neuron.x, neuron.y, neuron.radius * 4.5);
+				glow.addColorStop(0, `rgba(23, 59, 112, ${pulse * 0.72})`);
+				glow.addColorStop(0.32, `rgba(38, 82, 143, ${pulse * 0.38})`);
+				glow.addColorStop(0.68, `rgba(65, 108, 166, ${pulse * 0.14})`);
+				glow.addColorStop(1, "rgba(23, 59, 112, 0)");
 				context.fillStyle = glow;
 				context.beginPath();
-				context.arc(neuron.x, neuron.y, neuron.radius * 6.25, 0, Math.PI * 2);
+				context.arc(neuron.x, neuron.y, neuron.radius * 4.5, 0, Math.PI * 2);
 				context.fill();
 
-				context.fillStyle = `rgba(31, 41, 55, ${Math.min(0.82, pulse * 0.78)})`;
+				context.shadowColor = `rgba(23, 59, 112, ${pulse * 0.42})`;
+				context.shadowBlur = 4;
+				context.fillStyle = `rgba(23, 59, 112, ${Math.min(0.94, pulse)})`;
 				context.beginPath();
 				context.arc(neuron.x, neuron.y, neuron.radius, 0, Math.PI * 2);
 				context.fill();
+				context.shadowBlur = 0;
 			}
 		};
 

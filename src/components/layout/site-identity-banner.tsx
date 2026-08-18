@@ -21,7 +21,6 @@ export function SiteIdentityBanner() {
 					</small>
 				</span>
 			</div>
-			<span className="site-identity-divider" aria-hidden="true" />
 			<p>{site.identityBanner.quote}</p>
 		</aside>
 	);
