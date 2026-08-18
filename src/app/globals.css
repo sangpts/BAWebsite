@@ -2884,6 +2884,23 @@ main.paper .profile-content .career-timeline .experience-head h3 {
 	}
 }
 
+.hero-portrait {
+	position: relative;
+	width: min(150px, 44vw);
+	aspect-ratio: 1;
+	margin: 0 0 24px;
+	overflow: hidden;
+	border: 1px solid #d8d8d5;
+	border-radius: 12px;
+	background: #f7f7f5;
+	box-shadow: 0 10px 24px rgb(33 28 22 / 0.09);
+}
+
+.hero-portrait img {
+	object-fit: cover;
+	object-position: center 38%;
+}
+
 @media (min-width: 1100px) {
 	.profile-lead-grid {
 		display: grid;
@@ -2914,11 +2931,19 @@ main.paper .profile-content .career-timeline .experience-head h3 {
 		position: relative;
 		z-index: 1;
 		width: 100%;
+		height: 100%;
+	}
+	.profile-content .profile-lead-grid .hero-portrait {
+		position: relative;
+		right: auto;
+		bottom: auto;
+		width: clamp(128px, 11vw, 140px);
+		margin: 0 0 28px;
 	}
 	.profile-lead-grid .hero-copy h1 {
 		max-width: 620px;
 		margin-top: 0;
-		font-size: 43px;
+		font-size: 50px;
 		font-weight: 500;
 		line-height: 1.06;
 		letter-spacing: -0.035em;
@@ -2937,6 +2962,7 @@ main.paper .profile-content .career-timeline .experience-head h3 {
 		content: "";
 	}
 	.profile-content .profile-lead-grid .hero-intro::before {
+		display: none;
 		position: absolute;
 		bottom: 10px;
 		left: 0;
@@ -2953,6 +2979,7 @@ main.paper .profile-content .career-timeline .experience-head h3 {
 		pointer-events: none;
 	}
 	.profile-content .profile-lead-grid .hero-intro::after {
+		display: none;
 		position: absolute;
 		right: -104px;
 		bottom: -116px;
