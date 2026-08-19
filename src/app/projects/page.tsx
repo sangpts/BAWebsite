@@ -1,10 +1,14 @@
 import { SiteFooter } from "src/components/layout/site-footer";
 import { SiteHeader } from "src/components/layout/site-header";
+import { SiteSection } from "src/components/layout/site-header.type";
 import { ProjectSection } from "src/components/projects/project-section";
 import { ProjectsCta } from "src/components/projects/projects-cta";
 import { RevealOnScroll } from "src/components/ui/reveal-on-scroll";
 import { projects } from "src/data/projects";
 
+/**
+ * Renders the curated project case-study journey in the intended editorial order.
+ */
 export default function ProjectsPage() {
 	const projectOrder = ["enterprise-system", "corporate-website"];
 	const selectedProjects = projectOrder
@@ -13,7 +17,7 @@ export default function ProjectsPage() {
 
 	return (
 		<main className="paper">
-			<SiteHeader active="projects" />
+			<SiteHeader active={SiteSection.Projects} />
 			<div className="page-content projects-editorial">
 				<RevealOnScroll>
 					<section className="projects-editorial__intro">
@@ -40,8 +44,8 @@ export default function ProjectsPage() {
 
 				<div className="projects-editorial__journey">
 					{selectedProjects.map((project, index) => (
-						<RevealOnScroll key={project.id} delay={index * 70}>
-							<ProjectSection project={project} index={index} />
+						<RevealOnScroll delay={index * 70} key={project.id}>
+							<ProjectSection index={index} project={project} />
 						</RevealOnScroll>
 					))}
 				</div>

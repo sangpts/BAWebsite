@@ -1,4 +1,5 @@
 import { SiteHeader } from "src/components/layout/site-header";
+import { SiteSection } from "src/components/layout/site-header.type";
 import { SiteIdentityBanner } from "src/components/layout/site-identity-banner";
 import { CoreCapabilities } from "src/components/profile/core-capabilities";
 import { DeliveryApproach } from "src/components/profile/delivery-approach";
@@ -7,10 +8,14 @@ import { ExperienceTimeline } from "src/components/profile/experience";
 import { Introduction } from "src/components/profile/introduction";
 import { ProfileProjectsCta } from "src/components/profile/profile-projects-cta";
 import { RevealOnScroll } from "src/components/ui/reveal-on-scroll";
+
+/**
+ * Renders the professional profile page and its transition into the project case studies.
+ */
 export default function ProfilePage() {
 	return (
 		<main className="paper">
-			<SiteHeader active="profile" />
+			<SiteHeader active={SiteSection.Profile} />
 			<div className="page-content profile-content">
 				<div className="profile-lead-grid">
 					<RevealOnScroll>
@@ -21,7 +26,7 @@ export default function ProfilePage() {
 					</RevealOnScroll>
 				</div>
 				<SiteIdentityBanner />
-				<RevealOnScroll delay={80} className="domain-experience-shell" fullBleed>
+				<RevealOnScroll className="domain-experience-shell" delay={80} fullBleed>
 					<DomainExperience />
 				</RevealOnScroll>
 				<RevealOnScroll delay={110}>
@@ -30,7 +35,7 @@ export default function ProfilePage() {
 				<RevealOnScroll delay={140}>
 					<ExperienceTimeline />
 				</RevealOnScroll>
-				<RevealOnScroll delay={170} className="profile-projects-cta-shell" fullBleed>
+				<RevealOnScroll className="profile-projects-cta-shell" delay={170} fullBleed>
 					<ProfileProjectsCta />
 				</RevealOnScroll>
 			</div>

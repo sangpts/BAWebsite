@@ -5,6 +5,7 @@
   "type": "module",
   "scripts": {
     "build": "next build",
+    "check:css": "node scripts/check-css-contract.mjs",
     "dev": "next dev",
     "lint": "biome check src",
     "start": "next start",
@@ -12,7 +13,8 @@
     "db:stop": "docker compose stop mongodb",
     "db:logs": "docker compose logs -f mongodb",
     "db:seed": "node --env-file=.env.local scripts/seed-content.mts",
-    "test": "tsc --noEmit"
+    "test": "tsc --noEmit",
+    "validate": "npm run check:css && npm run test && npm run lint && npm run build"
   },
   "dependencies": {
     "@lobehub/icons": "^5.16.0",
