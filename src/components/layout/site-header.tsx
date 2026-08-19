@@ -36,7 +36,7 @@ export function SiteHeader({ active }: { active: "profile" | "projects" }) {
 
 			lastScrollY.current = currentScrollY;
 			if (scrollEndTimer.current) clearTimeout(scrollEndTimer.current);
-			scrollEndTimer.current = setTimeout(() => setIsScrolling(false), 400);
+			scrollEndTimer.current = setTimeout(() => setIsScrolling(false), 360);
 		};
 		const handleWheelIntent = (event: WheelEvent) => {
 			if (event.deltaY < -1) {
