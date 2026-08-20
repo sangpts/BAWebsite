@@ -21,6 +21,7 @@ body {
 
 body.is-navigation-locked {
 	overflow: hidden;
+	padding-right: var(--navigation-scrollbar-compensation, 0px);
 }
 
 a {
@@ -55,6 +56,17 @@ h4,
 ul,
 ol {
 	margin-top: 0;
+}
+
+p,
+li,
+h1,
+h2,
+h3,
+h4,
+span,
+a {
+	overflow-wrap: break-word;
 }
 
 .paper {
@@ -93,14 +105,14 @@ ol {
 	transform: translate3d(0, 0, 0);
 }
 
-.scroll-reveal--full-bleed {
-	width: calc(100% + (var(--profile-page-gutter) * 2));
-	margin-inline: calc(var(--profile-page-gutter) * -1);
-}
-
 .profile-content > .scroll-reveal {
 	width: 100%;
 	min-width: 0;
+}
+
+.profile-content > .scroll-reveal.scroll-reveal--full-bleed {
+	width: calc(100% + (var(--profile-page-gutter) * 2));
+	margin-inline: calc(var(--profile-page-gutter) * -1);
 }
 
 .profile-content > .scroll-reveal:not(:last-child) {
@@ -191,6 +203,17 @@ ol {
 	line-height: 1.35;
 }
 
+.visually-hidden {
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	padding: 0;
+	overflow: hidden;
+	clip: rect(0 0 0 0);
+	white-space: nowrap;
+	border: 0;
+}
+
 a:focus-visible,
 button:focus-visible,
 summary:focus-visible {
@@ -226,13 +249,23 @@ summary:focus-visible {
 	}
 
 	.page-content {
-		padding: 24px 16px 0;
+		padding: 22px 18px 0;
 	}
 
 	.profile-content {
-		--profile-page-gutter: 16px;
-		--profile-section-gap: 24px;
-		--profile-heading-gap: 16px;
+		--profile-page-gutter: 18px;
+		--profile-section-gap: 28px;
+		--profile-heading-gap: 17px;
+	}
+}
+
+@media (max-width: 389px) {
+	.page-content {
+		padding-inline: 15px;
+	}
+
+	.profile-content {
+		--profile-page-gutter: 15px;
 	}
 }
 

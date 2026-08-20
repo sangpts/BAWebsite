@@ -7,7 +7,8 @@ import { RevealOnScroll } from "src/components/ui/reveal-on-scroll";
 import { projects } from "src/data/projects";
 
 /**
- * Renders the curated project case-study journey in the intended editorial order.
+ * Renders two end-to-end business cases covering internal operations and
+ * external digital experience.
  */
 export default function ProjectsPage() {
 	const projectOrder = ["enterprise-system", "corporate-website"];
@@ -19,38 +20,53 @@ export default function ProjectsPage() {
 		<main className="paper">
 			<SiteHeader active={SiteSection.Projects} />
 			<div className="page-content projects-editorial">
-				<RevealOnScroll>
+				<RevealOnScroll className="projects-reveal projects-reveal--intro">
 					<section className="projects-editorial__intro">
 						<div className="projects-editorial__intro-copy">
-							<p className="projects-editorial__eyebrow">Selected projects / 2023—2026</p>
+							<p className="projects-editorial__eyebrow">Selected work / 2023—2026</p>
 							<h1>
-								Business needs,
-								<br />
-								made workable.
+								<span>Inside the business.</span>
+								<span>Outside the business.</span>
 							</h1>
 							<p className="projects-editorial__subtitle">
-								Two perspectives. One practical approach.
+								Two projects showing one practical approach to digital transformation.
 							</p>
 						</div>
 						<div className="projects-editorial__manifesto">
 							<p>
-								I connect business context, system logic, and user experience to shape solutions
-								that teams can understand, implement, and use.
+								I investigate the real business context, identify the underlying problem, define a
+								workable solution, validate it, and stay involved through delivery.
 							</p>
-							<span>Business analysis · System delivery · Digital experience</span>
+							<span>Business Analysis · Solution Design · Development · Testing · Delivery</span>
 						</div>
 					</section>
 				</RevealOnScroll>
 
+				<RevealOnScroll className="projects-reveal projects-reveal--index" delay={60}>
+					<nav aria-label="Project index" className="projects-index">
+						{selectedProjects.map((project, index) => (
+							<a href={`#${project.id}`} key={project.id}>
+								<span>{String(index + 1).padStart(2, "0")}</span>
+								<strong>{project.caseStudy.perspective}</strong>
+								<small>{project.title}</small>
+							</a>
+						))}
+					</nav>
+				</RevealOnScroll>
+
 				<div className="projects-editorial__journey">
 					{selectedProjects.map((project, index) => (
-						<RevealOnScroll delay={index * 70} key={project.id}>
+						<RevealOnScroll
+							className="projects-reveal projects-reveal--case"
+							delay={index * 90}
+							key={project.id}
+						>
 							<ProjectSection index={index} project={project} />
 						</RevealOnScroll>
 					))}
 				</div>
 
-				<RevealOnScroll delay={80}>
+				<RevealOnScroll className="projects-reveal projects-reveal--closing projects-closing-shell">
 					<ProjectsCta />
 				</RevealOnScroll>
 			</div>

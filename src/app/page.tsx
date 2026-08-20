@@ -18,24 +18,32 @@ export default function ProfilePage() {
 			<SiteHeader active={SiteSection.Profile} />
 			<div className="page-content profile-content">
 				<div className="profile-lead-grid">
-					<RevealOnScroll>
+					<RevealOnScroll className="profile-reveal profile-reveal--hero">
 						<Introduction />
 					</RevealOnScroll>
-					<RevealOnScroll delay={40}>
+					<RevealOnScroll className="profile-reveal profile-reveal--delivery" delay={40}>
 						<DeliveryApproach />
 					</RevealOnScroll>
 				</div>
 				<SiteIdentityBanner />
-				<RevealOnScroll className="domain-experience-shell" delay={80} fullBleed>
+				<RevealOnScroll
+					className="profile-reveal profile-reveal--domain domain-experience-shell"
+					delay={80}
+					fullBleed
+				>
 					<DomainExperience />
 				</RevealOnScroll>
-				<RevealOnScroll delay={110}>
+				<RevealOnScroll className="profile-reveal profile-reveal--capabilities" delay={110}>
 					<CoreCapabilities />
 				</RevealOnScroll>
-				<RevealOnScroll delay={140}>
+				<RevealOnScroll className="profile-reveal profile-reveal--experience" delay={140}>
 					<ExperienceTimeline />
 				</RevealOnScroll>
-				<RevealOnScroll className="profile-projects-cta-shell" delay={170} fullBleed>
+				<RevealOnScroll
+					className="profile-reveal profile-reveal--cta profile-projects-cta-shell"
+					delay={170}
+					fullBleed
+				>
 					<ProfileProjectsCta />
 				</RevealOnScroll>
 			</div>

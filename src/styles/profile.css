@@ -1,90 +1,210 @@
-.profile-content .scroll-reveal {
+.profile-content .profile-reveal {
 	opacity: 1;
 	filter: none;
 	transform: none;
 	transition: none;
 }
 
-.profile-content .scroll-reveal .hero-experience-badge,
-.profile-content .scroll-reveal .hero-portrait,
-.profile-content .scroll-reveal .hero-decoration,
-.profile-content .scroll-reveal .hero-copy h1,
-.profile-content .scroll-reveal .delivery-stage,
-.profile-content .scroll-reveal .delivery-core,
-.profile-content .scroll-reveal .domain-intro,
-.profile-content .scroll-reveal .domain-grid > li,
-.profile-content .scroll-reveal .core-capabilities__heading,
-.profile-content .scroll-reveal .ai-capability,
-.profile-content .scroll-reveal .capability-group,
-.profile-content .scroll-reveal .career-journey__heading,
-.profile-content .scroll-reveal .experience-row,
-.profile-content .scroll-reveal .profile-projects-cta__copy,
-.profile-content .scroll-reveal .profile-projects-cta__next {
+.profile-reveal--hero .hero-experience-badge,
+.profile-reveal--hero .hero-portrait,
+.profile-reveal--hero .hero-decoration,
+.profile-reveal--hero .hero-copy h1,
+.profile-reveal--delivery .delivery-heading,
+.profile-reveal--delivery .delivery-stage,
+.profile-reveal--delivery .delivery-core,
+.profile-reveal--domain .domain-intro,
+.profile-reveal--domain .domain-grid > li,
+.profile-reveal--capabilities .core-capabilities__heading,
+.profile-reveal--capabilities .ai-capability,
+.profile-reveal--capabilities .capability-group,
+.profile-reveal--experience .career-journey__heading,
+.profile-reveal--experience .experience-row,
+.profile-reveal--cta .profile-projects-cta__copy,
+.profile-reveal--cta .profile-projects-cta__next,
+.profile-reveal--cta .profile-projects-cta__meta {
 	opacity: 0;
-	transform: translate3d(0, 10px, 0);
+	filter: blur(2px);
+	transform: translate3d(0, 16px, 0);
 	transition:
-		opacity 520ms ease-out,
-		transform 620ms var(--ease-out);
+		opacity 620ms ease-out,
+		filter 520ms ease,
+		transform 760ms var(--ease-out);
 }
 
-.profile-content .scroll-reveal.is-visible .hero-experience-badge,
-.profile-content .scroll-reveal.is-visible .hero-portrait,
-.profile-content .scroll-reveal.is-visible .hero-decoration,
-.profile-content .scroll-reveal.is-visible .hero-copy h1,
-.profile-content .scroll-reveal.is-visible .delivery-stage,
-.profile-content .scroll-reveal.is-visible .delivery-core,
-.profile-content .scroll-reveal.is-visible .domain-intro,
-.profile-content .scroll-reveal.is-visible .domain-grid > li,
-.profile-content .scroll-reveal.is-visible .core-capabilities__heading,
-.profile-content .scroll-reveal.is-visible .ai-capability,
-.profile-content .scroll-reveal.is-visible .capability-group,
-.profile-content .scroll-reveal.is-visible .career-journey__heading,
-.profile-content .scroll-reveal.is-visible .experience-row,
-.profile-content .scroll-reveal.is-visible .profile-projects-cta__copy,
-.profile-content .scroll-reveal.is-visible .profile-projects-cta__next {
+.profile-reveal--hero .hero-experience-badge {
+	transform: translate3d(-14px, 0, 0);
+}
+
+.profile-reveal--hero .hero-portrait {
+	transform: translate3d(0, 12px, 0) scale(0.975);
+}
+
+.profile-reveal--hero .hero-decoration {
+	transform: translate3d(-10px, 0, 0);
+}
+
+.profile-reveal--hero .hero-copy h1 {
+	transform: translate3d(0, 20px, 0);
+}
+
+.profile-reveal--delivery .delivery-stage {
+	transition:
+		opacity 580ms ease-out,
+		filter 480ms ease,
+		transform 720ms var(--ease-out),
+		border-color 350ms ease,
+		box-shadow 350ms ease;
+}
+
+.profile-reveal--delivery .delivery-core {
+	transform: scale(0.92);
+}
+
+.profile-reveal--domain .domain-grid > li {
+	transform: translate3d(14px, 0, 0);
+}
+
+.profile-reveal--capabilities .capability-group {
+	transition:
+		opacity 580ms ease-out,
+		filter 480ms ease,
+		transform 720ms var(--ease-out),
+		border-color 500ms var(--ease-out),
+		box-shadow 500ms var(--ease-out);
+}
+
+.profile-reveal.is-visible .hero-experience-badge,
+.profile-reveal.is-visible .hero-portrait,
+.profile-reveal.is-visible .hero-decoration,
+.profile-reveal.is-visible .hero-copy h1,
+.profile-reveal.is-visible .delivery-heading,
+.profile-reveal.is-visible .delivery-stage,
+.profile-reveal.is-visible .delivery-core,
+.profile-reveal.is-visible .domain-intro,
+.profile-reveal.is-visible .domain-grid > li,
+.profile-reveal.is-visible .core-capabilities__heading,
+.profile-reveal.is-visible .ai-capability,
+.profile-reveal.is-visible .capability-group,
+.profile-reveal.is-visible .career-journey__heading,
+.profile-reveal.is-visible .experience-row,
+.profile-reveal.is-visible .profile-projects-cta__copy,
+.profile-reveal.is-visible .profile-projects-cta__next,
+.profile-reveal.is-visible .profile-projects-cta__meta {
 	opacity: 1;
-	transform: translate3d(0, 0, 0);
+	filter: none;
+	transform: translate3d(0, 0, 0) scale(1);
 }
 
-.profile-content .scroll-reveal.is-visible .hero-experience-badge {
-	transition-delay: 20ms;
+.profile-reveal--hero.is-visible .hero-experience-badge {
+	transition-delay: 30ms;
 }
 
-.profile-content .scroll-reveal.is-visible .hero-portrait {
-	transition-delay: 70ms;
+.profile-reveal--hero.is-visible .hero-portrait {
+	transition-delay: 115ms;
 }
 
-.profile-content .scroll-reveal.is-visible .hero-decoration,
-.profile-content .scroll-reveal.is-visible .domain-grid > li:nth-child(1),
-.profile-content .scroll-reveal.is-visible .ai-capability,
-.profile-content .scroll-reveal.is-visible .experience-row:nth-child(1) {
-	transition-delay: 110ms;
+.profile-reveal--hero.is-visible .hero-decoration {
+	transition-delay: 205ms;
 }
 
-.profile-content .scroll-reveal.is-visible .hero-copy h1,
-.profile-content .scroll-reveal.is-visible .domain-grid > li:nth-child(2),
-.profile-content .scroll-reveal.is-visible .capability-group:nth-child(1),
-.profile-content .scroll-reveal.is-visible .experience-row:nth-child(2),
-.profile-content .scroll-reveal.is-visible .profile-projects-cta__next {
-	transition-delay: 160ms;
+.profile-reveal--hero.is-visible .hero-copy h1 {
+	transition-delay: 295ms;
 }
 
-.profile-content .scroll-reveal.is-visible .domain-grid > li:nth-child(3),
-.profile-content .scroll-reveal.is-visible .capability-group:nth-child(2),
-.profile-content .scroll-reveal.is-visible .experience-row:nth-child(3) {
-	transition-delay: 220ms;
+.profile-reveal--delivery.is-visible .delivery-heading {
+	transition-delay: 25ms;
 }
 
-.profile-content .scroll-reveal.is-visible .capability-group:nth-child(3) {
-	transition-delay: 280ms;
+.profile-reveal--delivery.is-visible .delivery-stage--1 {
+	transition-delay: 95ms;
 }
 
-.profile-content .scroll-reveal.is-visible .capability-group:nth-child(4) {
-	transition-delay: 340ms;
+.profile-reveal--delivery.is-visible .delivery-stage--2 {
+	transition-delay: 165ms;
 }
 
-.profile-content .scroll-reveal.is-visible .capability-group:nth-child(5) {
-	transition-delay: 400ms;
+.profile-reveal--delivery.is-visible .delivery-core {
+	transition-delay: 225ms;
+}
+
+.profile-reveal--delivery.is-visible .delivery-stage--3 {
+	transition-delay: 295ms;
+}
+
+.profile-reveal--delivery.is-visible .delivery-stage--4 {
+	transition-delay: 365ms;
+}
+
+.profile-reveal--domain.is-visible .domain-intro {
+	transition-delay: 35ms;
+}
+
+.profile-reveal--domain.is-visible .domain-grid > li:nth-child(1) {
+	transition-delay: 135ms;
+}
+
+.profile-reveal--domain.is-visible .domain-grid > li:nth-child(2) {
+	transition-delay: 225ms;
+}
+
+.profile-reveal--domain.is-visible .domain-grid > li:nth-child(3) {
+	transition-delay: 315ms;
+}
+
+.profile-reveal--capabilities.is-visible .core-capabilities__heading {
+	transition-delay: 35ms;
+}
+
+.profile-reveal--capabilities.is-visible .ai-capability {
+	transition-delay: 135ms;
+}
+
+.profile-reveal--capabilities.is-visible .capability-group:nth-child(1) {
+	transition-delay: 225ms;
+}
+
+.profile-reveal--capabilities.is-visible .capability-group:nth-child(2) {
+	transition-delay: 295ms;
+}
+
+.profile-reveal--capabilities.is-visible .capability-group:nth-child(3) {
+	transition-delay: 365ms;
+}
+
+.profile-reveal--capabilities.is-visible .capability-group:nth-child(4) {
+	transition-delay: 435ms;
+}
+
+.profile-reveal--capabilities.is-visible .capability-group:nth-child(5) {
+	transition-delay: 505ms;
+}
+
+.profile-reveal--experience.is-visible .career-journey__heading {
+	transition-delay: 35ms;
+}
+
+.profile-reveal--experience.is-visible .experience-row:nth-child(1) {
+	transition-delay: 135ms;
+}
+
+.profile-reveal--experience.is-visible .experience-row:nth-child(2) {
+	transition-delay: 235ms;
+}
+
+.profile-reveal--experience.is-visible .experience-row:nth-child(3) {
+	transition-delay: 335ms;
+}
+
+.profile-reveal--cta.is-visible .profile-projects-cta__copy {
+	transition-delay: 50ms;
+}
+
+.profile-reveal--cta.is-visible .profile-projects-cta__next {
+	transition-delay: 170ms;
+}
+
+.profile-reveal--cta.is-visible .profile-projects-cta__meta {
+	transition-delay: 270ms;
 }
 
 .profile-lead-grid {
@@ -1052,12 +1172,13 @@
 	grid-auto-flow: column;
 	place-items: center;
 	gap: 8px;
-	min-height: 27px;
+	min-height: 28px;
 	padding: 6px 12px;
 	border: 1px solid var(--color-accent);
-	background: var(--color-accent);
-	box-shadow: 0 6px 16px rgb(139 93 42 / 0.22);
-	color: #ffffff;
+	border-radius: 999px;
+	background: transparent;
+	box-shadow: none;
+	color: var(--color-accent-hover);
 	font-size: 10px;
 	font-weight: 700;
 	line-height: 1;
@@ -1069,8 +1190,8 @@
 	width: 6px;
 	height: 6px;
 	border-radius: 50%;
-	background: #ffffff;
-	box-shadow: 0 0 0 3px rgb(255 255 255 / 0.18);
+	background: var(--color-accent);
+	box-shadow: 0 0 0 3px rgb(139 93 42 / 0.13);
 	content: "";
 }
 
@@ -1387,8 +1508,9 @@
 		grid-column: auto;
 		grid-row: auto;
 		grid-template-columns: 44px minmax(0, 1fr);
-		min-height: 116px;
+		min-height: 108px;
 		padding: 12px;
+		border-radius: 8px;
 	}
 
 	.delivery-stage--right .delivery-icon,
@@ -1441,67 +1563,96 @@
 }
 
 @media (max-width: 767px) {
+	.profile-reveal--hero .hero-experience-badge,
+	.profile-reveal--hero .hero-portrait,
+	.profile-reveal--hero .hero-decoration,
+	.profile-reveal--hero .hero-copy h1,
+	.profile-reveal--delivery .delivery-heading,
+	.profile-reveal--delivery .delivery-stage,
+	.profile-reveal--delivery .delivery-core,
+	.profile-reveal--domain .domain-intro,
+	.profile-reveal--domain .domain-grid > li,
+	.profile-reveal--capabilities .core-capabilities__heading,
+	.profile-reveal--capabilities .ai-capability,
+	.profile-reveal--capabilities .capability-group,
+	.profile-reveal--experience .career-journey__heading,
+	.profile-reveal--experience .experience-row,
+	.profile-reveal--cta .profile-projects-cta__copy,
+	.profile-reveal--cta .profile-projects-cta__next,
+	.profile-reveal--cta .profile-projects-cta__meta {
+		transition-duration: 520ms, 420ms, 620ms;
+	}
+
 	.hero-copy {
-		grid-template-columns: 138px minmax(0, 1fr);
+		grid-template-columns: 130px minmax(0, 1fr);
 		column-gap: 20px;
 	}
 
 	.hero-portrait {
-		width: 138px;
+		width: 130px;
 	}
 
 	.hero-copy h1 {
 		font-size: clamp(32px, 7.2vw, 42px);
+		line-height: 1.06;
 	}
 
 	.domain-showcase {
 		grid-template-columns: 1fr;
 		min-height: 0;
-		padding: 0 18px 24px;
+		padding: 0 20px 26px;
 	}
 
 	.domain-intro {
-		min-height: 280px;
-		margin-inline: -18px;
-		padding: 34px 36px 42px;
-		clip-path: polygon(0 0, 100% 0, 100% 82%, 82% 100%, 0 100%);
+		min-height: 250px;
+		margin-inline: -20px;
+		padding: 32px 34px 40px;
+		clip-path: polygon(0 0, 100% 0, 100% 84%, 84% 100%, 0 100%);
+	}
+
+	.domain-summary {
+		max-width: 360px;
 	}
 
 	.domain-grid {
-		padding: 8px 0 0;
+		padding: 10px 0 0;
 	}
 
 	.domain-card-link {
-		grid-template-columns: 58px 10px minmax(0, 1fr);
+		grid-template-columns: 56px 10px minmax(0, 1fr);
 		gap: 12px;
-		min-height: 96px;
-		padding-block: 10px;
+		min-height: 90px;
+		padding-block: 9px;
 	}
 
 	.domain-card-icon {
-		width: 56px;
+		width: 54px;
+	}
+
+	.domain-card-code {
+		font-size: 30px;
 	}
 
 	.core-capabilities__heading h2 {
-		font-size: clamp(28px, 8vw, 32px);
+		font-size: clamp(29px, 8vw, 34px);
 	}
 
 	.ai-capability {
 		grid-template-columns: 1fr;
-		gap: 22px;
-		padding: 24px 20px;
+		gap: 18px;
+		padding: 22px 18px;
 	}
 
 	.ai-capability__emblem {
-		width: min(152px, 58vw);
+		width: min(132px, 46vw);
 	}
 
 	.ai-capability__content {
-		text-align: center;
+		text-align: left;
 	}
 
 	.ai-capability__content > p {
-		margin-inline: auto;
+		margin-inline: 0;
 	}
 
 	.ai-capability__tools {
@@ -1525,6 +1676,12 @@
 
 	.capability-groups {
 		grid-template-columns: repeat(2, minmax(0, 1fr));
+		gap: 12px;
+	}
+
+	.capability-group {
+		min-height: 258px;
+		padding: 20px 18px;
 	}
 
 	.career-journey__heading h2 {
@@ -1573,21 +1730,52 @@
 }
 
 @media (max-width: 599px) {
+	.hero-intro {
+		padding: 4px 0 8px;
+	}
+
 	.hero-copy {
 		display: block;
 	}
 
+	.hero-experience-badge {
+		margin-bottom: 13px;
+		padding: 5px 10px;
+		font-size: 11px;
+	}
+
 	.hero-profile {
-		margin-bottom: 18px;
+		margin-bottom: 16px;
+	}
+
+	.hero-portrait {
+		width: 116px;
+	}
+
+	.hero-decoration {
+		top: -13px;
+		left: 132px;
+		width: 148px;
+		height: 148px;
 	}
 
 	.hero-copy h1 {
-		margin-top: 8px;
-		font-size: clamp(30px, 9.6vw, 38px);
+		margin-top: 7px;
+		font-size: clamp(32px, 9.2vw, 38px);
+		line-height: 1.04;
+	}
+
+	.delivery-approach {
+		padding: 8px 0 0;
+	}
+
+	.delivery-heading {
+		margin-bottom: 17px;
 	}
 
 	.delivery-heading .eyebrow {
 		grid-template-columns: auto;
+		font-size: 11px;
 	}
 
 	.delivery-heading .eyebrow::before,
@@ -1597,6 +1785,8 @@
 
 	.delivery-framework {
 		grid-template-columns: 1fr;
+		gap: 10px;
+		padding: 0;
 	}
 
 	.delivery-core,
@@ -1606,6 +1796,97 @@
 	.delivery-stage--3,
 	.delivery-stage--4 {
 		grid-column: 1;
+	}
+
+	.delivery-core {
+		width: 124px;
+		margin-bottom: 6px;
+	}
+
+	.delivery-stage,
+	.delivery-stage--1,
+	.delivery-stage--2,
+	.delivery-stage--3,
+	.delivery-stage--4 {
+		grid-template-columns: 42px minmax(0, 1fr);
+		min-height: 94px;
+		padding: 13px;
+		border-radius: 6px;
+	}
+
+	.delivery-stage--right .delivery-icon,
+	.delivery-stage--left .delivery-icon {
+		width: 40px;
+		height: 40px;
+	}
+
+	.delivery-number {
+		font-size: 17px;
+	}
+
+	.delivery-stage h3 {
+		font-size: 14px;
+	}
+
+	.delivery-phase {
+		font-size: 10px;
+		letter-spacing: 0.04em;
+	}
+
+	.domain-intro {
+		min-height: 228px;
+		padding: 28px 28px 36px;
+	}
+
+	.domain-eyebrow {
+		margin-bottom: 20px;
+	}
+
+	.domain-intro h2 {
+		font-size: clamp(35px, 10.5vw, 40px);
+	}
+
+	.domain-summary {
+		margin-top: 18px;
+		font-size: 13px;
+	}
+
+	.domain-card-link {
+		min-height: 86px;
+	}
+
+	.domain-card-body h3 {
+		font-size: 13px;
+	}
+
+	.ai-capability__emblem {
+		width: 118px;
+	}
+
+	.ai-capability__tools li {
+		min-height: 48px;
+	}
+
+	.capability-group {
+		min-height: 0;
+	}
+
+	.career-journey__heading {
+		margin-bottom: 18px;
+	}
+
+	.career-journey__heading h2 {
+		font-size: clamp(30px, 9vw, 36px);
+	}
+
+	.experience-head h3 {
+		font-size: 16px;
+	}
+
+	.experience-head h4,
+	.experience-summary,
+	.experience-contributions li {
+		font-size: 13px;
 	}
 
 	.profile-projects-cta__copy,
@@ -1626,16 +1907,25 @@
 
 @media (max-width: 479px) {
 	.hero-portrait {
-		width: 124px;
+		width: 110px;
 	}
 
 	.domain-intro {
-		min-height: 260px;
-		padding: 30px 28px 42px;
+		min-height: 218px;
+		padding: 27px 25px 35px;
 	}
 
 	.domain-intro h2 {
-		font-size: clamp(32px, 11vw, 42px);
+		font-size: clamp(33px, 10.8vw, 39px);
+	}
+
+	.domain-card-link {
+		grid-template-columns: 52px 8px minmax(0, 1fr);
+		gap: 10px;
+	}
+
+	.domain-card-icon {
+		width: 50px;
 	}
 
 	.domain-card-code {
@@ -1643,16 +1933,22 @@
 	}
 
 	.ai-capability {
-		padding-inline: 16px;
+		padding-inline: 15px;
 	}
 
 	.ai-capability__tools li {
-		grid-template-columns: 30px minmax(0, 1fr);
-		padding-inline: 8px;
+		grid-template-columns: 28px minmax(0, 1fr);
+		gap: 7px;
+		padding-inline: 7px;
+	}
+
+	.ai-capability__tools svg {
+		width: 24px;
+		height: 24px;
 	}
 
 	.ai-capability__tools span {
-		font-size: 12px;
+		font-size: 11.5px;
 	}
 
 	.capability-groups {
@@ -1660,11 +1956,35 @@
 	}
 
 	.capability-group {
+		padding: 18px 17px;
+	}
+
+	.capability-group__icon {
+		width: 32px;
+		height: 32px;
+		margin-bottom: 13px;
+	}
+
+	.capability-group h3 {
 		min-height: 0;
+	}
+
+	.capability-group ul {
+		gap: 6px;
+		margin-top: 13px;
+	}
+
+	.capability-group li {
+		font-size: 13px;
 	}
 
 	.experience-current {
 		padding-inline: 9px;
+	}
+
+	.profile-projects-cta__next > a {
+		min-height: 56px;
+		padding-inline: 18px;
 	}
 }
 
@@ -1672,5 +1992,28 @@
 	.delivery-orbit,
 	.ai-capability::before {
 		animation: none;
+	}
+
+	.profile-reveal--hero .hero-experience-badge,
+	.profile-reveal--hero .hero-portrait,
+	.profile-reveal--hero .hero-decoration,
+	.profile-reveal--hero .hero-copy h1,
+	.profile-reveal--delivery .delivery-heading,
+	.profile-reveal--delivery .delivery-stage,
+	.profile-reveal--delivery .delivery-core,
+	.profile-reveal--domain .domain-intro,
+	.profile-reveal--domain .domain-grid > li,
+	.profile-reveal--capabilities .core-capabilities__heading,
+	.profile-reveal--capabilities .ai-capability,
+	.profile-reveal--capabilities .capability-group,
+	.profile-reveal--experience .career-journey__heading,
+	.profile-reveal--experience .experience-row,
+	.profile-reveal--cta .profile-projects-cta__copy,
+	.profile-reveal--cta .profile-projects-cta__next,
+	.profile-reveal--cta .profile-projects-cta__meta {
+		opacity: 1;
+		filter: none;
+		transform: none;
+		transition: none;
 	}
 }

@@ -1,6 +1,6 @@
 "use client";
 
-import type { ReactNode } from "react";
+import type { CSSProperties, ReactNode } from "react";
 import { useEffect, useRef } from "react";
 
 interface RevealOnScrollProps {
@@ -11,7 +11,8 @@ interface RevealOnScrollProps {
 }
 
 /**
- * Reveals a content block once it enters the viewport while respecting reduced-motion settings.
+ * Reveals a content block when it enters the viewport and exposes it immediately
+ * when observation is unavailable.
  */
 export function RevealOnScroll({
 	children,
@@ -25,21 +26,25 @@ export function RevealOnScroll({
 		const element = ref.current;
 		if (!element) return;
 
-		if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
-			element.classList.add("is-visible");
+		const reveal = () => element.classList.add("is-visible");
+		if (
+			window.matchMedia("(prefers-reduced-motion: reduce)").matches ||
+			!("IntersectionObserver" in window)
+		) {
+			reveal();
 			return;
 		}
 
 		const observer = new IntersectionObserver(
 			([entry]) => {
 				if (!entry.isIntersecting) return;
-				element.classList.add("is-visible");
+				reveal();
 				observer.disconnect();
 			},
-			{ rootMargin: "0px 0px -3%", threshold: 0.04 },
+			{ rootMargin: "0px 0px -5%", threshold: 0.055 },
 		);
-
 		observer.observe(element);
+
 		return () => observer.disconnect();
 	}, []);
 
@@ -50,9 +55,10 @@ export function RevealOnScroll({
 	]
 		.filter(Boolean)
 		.join(" ");
+	const style = { "--reveal-delay": `${delay}ms`, transitionDelay: `${delay}ms` } as CSSProperties;
 
 	return (
-		<div className={classes} ref={ref} style={{ transitionDelay: `${delay}ms` }}>
+		<div className={classes} ref={ref} style={style}>
 			{children}
 		</div>
 	);
