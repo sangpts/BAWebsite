@@ -82,9 +82,9 @@ var projects = [
 		return $media;
 	};
 
-	var buildButton = function(label, url, style) {
+	var buildLink = function(label, url, className) {
 		return $('<a target="_blank" rel="noopener"></a>')
-			.addClass('btn ' + style)
+			.addClass(className)
 			.attr('href', url)
 			.text(label);
 	};
@@ -97,10 +97,10 @@ var projects = [
 				$body = $('<div class="project-body"></div>');
 
 			if (project.liveUrl) {
-				$actions.append(buildButton('Live demo', project.liveUrl, 'btn-primary'));
+				$actions.append(buildLink('Live demo', project.liveUrl, 'btn btn-primary'));
 			}
 			if (project.codeUrl) {
-				$actions.append(buildButton('Code', project.codeUrl, 'btn-outline'));
+				$actions.append(buildLink('Code', project.codeUrl, 'text-link text-link-out'));
 			}
 
 			if (project.status) {
@@ -116,7 +116,7 @@ var projects = [
 			}
 
 			$list.append(
-				$('<article class="card project-card reveal"></article>').append(buildMedia(project), $body)
+				$('<article class="project"></article>').append(buildMedia(project), $body)
 			);
 		});
 	};
@@ -260,13 +260,13 @@ var projects = [
 	};
 
 
-	// ---------- "Details" on work cards ----------
+	// ---------- "Details" on work case studies ----------
 	var toggles = function() {
 
 		$('.js-toggle').on('click', function(){
 			var $button = $(this),
 				$panel = $('#' + $button.attr('aria-controls')),
-				$card = $button.closest('.work-card'),
+				$card = $button.closest('.case'),
 				isOpen = $button.attr('aria-expanded') === 'true';
 
 			$button.attr('aria-expanded', isOpen ? 'false' : 'true');
