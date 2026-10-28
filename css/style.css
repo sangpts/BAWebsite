@@ -7,7 +7,7 @@
 	--ink: #111111;          /* headings, body */
 	--ink-soft: #4A4A4A;     /* secondary text */
 	--ink-faint: #8A8580;    /* labels, dates, captions */
-	--paper: #F7F4EF;        /* page background, warm paper */
+	--paper: #FFFFFF;        /* page background, bright white */
 	--paper-2: #FFFFFF;      /* sidebar, raised surfaces */
 	--rule: #DDD6CC;         /* hairlines, borders */
 	--accent: #5C4A3A;       /* coffee brown, the only colour */
@@ -43,20 +43,6 @@ body {
 	line-height: 1.65;
 	font-variant-numeric: oldstyle-nums;
 	overflow-x: hidden;
-}
-
-/* Paper grain: one fixed layer on its own compositing layer, so scrolling does not repaint it */
-body::after {
-	content: "";
-	position: fixed;
-	inset: 0;
-	z-index: 3000;
-	pointer-events: none;
-	opacity: 0.05;
-	mix-blend-mode: multiply;
-	background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='220' height='220'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
-	transform: translateZ(0);
-	will-change: transform;
 }
 
 h1, h2, h3, h4 {
