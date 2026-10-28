@@ -4,215 +4,173 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Phung Tan Sang | ERP &amp; Manufacturing Systems Analyst</title>
-	<meta name="description" content="ERP &amp; Manufacturing Systems Analyst | Power BI &amp; Power Platform">
+	<meta name="description" content="ERP and manufacturing systems analyst. Power BI reporting, Power Platform apps and ERP process analysis.">
 	<meta name="author" content="Phung Tan Sang">
 
 	<meta property="og:type" content="website">
 	<meta property="og:title" content="Phung Tan Sang | ERP &amp; Manufacturing Systems Analyst">
-	<meta property="og:description" content="ERP &amp; Manufacturing Systems Analyst | Power BI &amp; Power Platform">
-	<meta property="og:site_name" content="Phung Tan Sang">
-	<meta property="og:image" content="images/profile.jpg">
-	<meta name="twitter:card" content="summary">
-	<meta name="twitter:title" content="Phung Tan Sang | ERP &amp; Manufacturing Systems Analyst">
+	<meta property="og:description" content="ERP and manufacturing systems analyst. Power BI reporting, Power Platform apps and ERP process analysis.">
+	<meta property="og:url" content="">
+	<meta property="og:image" content="">
 
 	<link rel="icon" href="data:,">
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 	<link rel="stylesheet" href="css/style.css">
 
-	<!-- Lets CSS hide .animate-box until main.js reveals it, so content stays visible without JS -->
+	<!-- Lets CSS hide .reveal until main.js shows it, so content stays visible without JS -->
 	<script>document.documentElement.className += ' js';</script>
 </head>
 <body>
-<div id="colorlib-page">
 
-	<button type="button" class="colorlib-nav-toggle js-colorlib-nav-toggle" aria-label="Menu" aria-controls="colorlib-aside" aria-expanded="false"><i></i></button>
+	<!-- Top bar, shown below 1024px -->
+	<header class="topbar">
+		<a class="topbar-name" href="#home" data-nav-section="home">Phung Tan Sang</a>
+		<button type="button" class="nav-toggle js-nav-toggle" aria-label="Menu" aria-controls="sidebar" aria-expanded="false"><span></span></button>
+	</header>
 
-	<aside id="colorlib-aside">
-		<div class="aside-top">
-			<div class="author-img">
-				<span class="author-initials" aria-hidden="true">PS</span>
-				<img src="images/profile.jpg" alt="Phung Tan Sang" width="150" height="150" onerror="this.remove()">
-			</div>
-			<h1 id="colorlib-logo"><a href="#home" data-nav-section="home">Phung Tan Sang</a></h1>
-			<span class="position">ERP &amp; Manufacturing Systems Analyst</span>
-		</div>
+	<aside id="sidebar" class="sidebar">
+		<a class="sidebar-id" href="#home" data-nav-section="home">
+			<span class="avatar">
+				<span class="avatar-initials" aria-hidden="true">PS</span>
+				<img src="images/profile.jpg" alt="" width="120" height="120" onerror="this.remove()">
+			</span>
+			<span class="sidebar-name">Phung Tan Sang</span>
+		</a>
+		<p class="sidebar-role">ERP &amp; Manufacturing Systems Analyst</p>
 
-		<nav id="colorlib-main-menu" aria-label="Sections">
+		<nav class="menu" aria-label="Sections">
 			<ul>
-				<li class="active"><a href="#home" data-nav-section="home">Home</a></li>
-				<li><a href="#about" data-nav-section="about">About</a></li>
-				<li><a href="#case-studies" data-nav-section="case-studies">Case Studies</a></li>
-				<li><a href="#results" data-nav-section="results">Results</a></li>
-				<li><a href="#how-i-work" data-nav-section="how-i-work">How I Work</a></li>
-				<li><a href="#skills" data-nav-section="skills">Skills</a></li>
+				<li><a href="#work" data-nav-section="work">Work</a></li>
+				<li><a href="#projects" data-nav-section="projects">Projects</a></li>
 				<li><a href="#experience" data-nav-section="experience">Experience</a></li>
-				<li><a href="#education" data-nav-section="education">Education</a></li>
 				<li><a href="#contact" data-nav-section="contact">Contact</a></li>
 			</ul>
 		</nav>
 
-		<div class="colorlib-footer">
-			<p>&copy; 2026 Phung Tan Sang</p>
-			<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-			<p>Made with <i class="icon-heart" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank" rel="noopener">Colorlib</a></p>
-			<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-		</div>
+		<ul class="sidebar-links">
+			<li><a href="cv.pdf" download>Download CV</a></li>
+			<li><a href="mailto:sangphungsh2000@gmail.com">sangphungsh2000@gmail.com</a></li>
+		</ul>
+
+		<p class="sidebar-copy">&copy; 2026 Phung Tan Sang</p>
 	</aside>
 
-	<div class="aside-backdrop js-colorlib-nav-close" aria-hidden="true"></div>
+	<div class="backdrop js-nav-close" aria-hidden="true"></div>
 
-	<main id="colorlib-main">
+	<main class="main">
 
-		<!-- 2) HERO -->
-		<section id="home" class="colorlib-hero" data-section="home">
-			<div class="colorlib-narrow-content">
-				<div class="hero-text">
-					<h1>Hi!<br>I'm Sang</h1>
-					<h2>ERP &amp; Manufacturing Systems Analyst | Power BI &amp; Power Platform</h2>
-					<p><a class="btn btn-learn" href="cv.pdf" download>Download CV <i class="icon-download4" aria-hidden="true"></i></a></p>
+		<!-- HOME -->
+		<section id="home" class="hero" data-section="home">
+			<div class="container">
+				<h1 class="hero-name">Phung Tan Sang</h1>
+				<p class="hero-role"><span>ERP &amp; Manufacturing Systems Analyst</span></p>
+				<p class="hero-line">Power BI · Power Platform · ERP process analysis · 3 years in manufacturing</p>
+				<div class="actions hero-actions">
+					<a class="btn btn-primary" href="#work" data-nav-section="work">View my work</a>
+					<a class="btn btn-outline" href="cv.pdf" download>Download CV</a>
 				</div>
+				<ul class="stats">
+					<li><span class="stat-value">12×</span><span class="stat-label">Faster Power BI data refresh</span></li>
+					<li><span class="stat-value">4×</span><span class="stat-label">Faster app delivery with AI</span></li>
+					<li><span class="stat-value">7</span><span class="stat-label">Power Apps modules live</span></li>
+					<li><span class="stat-value">~70</span><span class="stat-label">Users moved to a new ERP</span></li>
+				</ul>
 			</div>
 		</section>
 
-		<!-- 3) ABOUT -->
-		<section id="about" class="colorlib-section colorlib-about" data-section="about">
-			<div class="colorlib-narrow-content">
-				<div class="animate-box">
-					<span class="heading-meta">About</span>
-					<h2 class="colorlib-heading">Who Am I?</h2>
+		<!-- WORK -->
+		<section id="work" class="section" data-section="work">
+			<div class="container">
+				<div class="section-head reveal">
+					<p class="section-label">Work</p>
+					<h2 class="section-title">Selected work</h2>
 				</div>
-				<div class="about-desc animate-box">
-					<p>ERP and manufacturing systems analyst with 4 years in IT, including 3 years in manufacturing plants. I work directly with department managers and the BOD to turn business needs into reports, dashboards and apps, from requirements to go-live.</p>
-					<p>My focus is digitalizing manufacturing processes, automating manual work and reducing costs by building in-house.</p>
-				</div>
-				<div class="about-cards">
-					<div class="about-card animate-box">
-						<span class="about-icon"><i class="icon-data" aria-hidden="true"></i></span>
-						<h3>ERP</h3>
-					</div>
-					<div class="about-card animate-box">
-						<span class="about-icon"><i class="icon-bar-graph" aria-hidden="true"></i></span>
-						<h3>Power BI</h3>
-					</div>
-					<div class="about-card animate-box">
-						<span class="about-icon"><i class="icon-flow-merge" aria-hidden="true"></i></span>
-						<h3>Power Platform</h3>
-					</div>
-					<div class="about-card animate-box">
-						<span class="about-icon"><i class="icon-clipboard3" aria-hidden="true"></i></span>
-						<h3>Business Analysis &amp; PM</h3>
-					</div>
-				</div>
-			</div>
-		</section>
 
-		<!-- 4) CASE STUDIES -->
-		<section id="case-studies" class="colorlib-section colorlib-cases" data-section="case-studies">
-			<div class="colorlib-narrow-content">
-				<div class="animate-box">
-					<span class="heading-meta">Work</span>
-					<h2 class="colorlib-heading">Case Studies</h2>
-				</div>
-				<div class="case-grid">
+				<div class="work-grid">
 
-					<article class="case-card animate-box">
-						<span class="case-tag">Manufacturing · Current role</span>
-						<h3>ERP reports without database access</h3>
-						<div class="case-actions">
-							<button type="button" class="case-toggle js-toggle" aria-expanded="false" aria-controls="case-1">Read more</button>
-						</div>
-						<div class="case-body" id="case-1" hidden>
+					<article class="card work-card reveal">
+						<p class="work-tag">Manufacturing · Current role</p>
+						<h3 class="card-title">ERP reports without database access</h3>
+						<p class="work-result">6 reports in daily use, no vendor fee</p>
+						<p class="work-tools">ERP · Report design · Email alerts</p>
+						<button type="button" class="details-toggle js-toggle" aria-expanded="false" aria-controls="work-1">Details</button>
+						<div class="work-details" id="work-1" hidden>
 							<h4>Challenge</h4>
 							<p>The ERP supplier would not open database access, so every new report had to be ordered from them.</p>
-							<h4>What I did</h4>
-							<ul class="case-list">
+							<h4>What was done</h4>
+							<ul class="bullets">
 								<li>Found a way to build ERP reports in-house without database access.</li>
 								<li>Rolled out ERP email alerts for Quality, Production and Sales.</li>
 								<li>Implemented the ERP inventory inspection module.</li>
 							</ul>
 							<h4>Result</h4>
-							<ul class="case-list">
+							<ul class="bullets">
 								<li>6 ERP reports in daily use with no vendor fee.</li>
 							</ul>
-							<h4>Tools</h4>
-							<ul class="chips chips-sm">
-								<li>ERP</li><li>Report design</li><li>Email alerts</li>
-							</ul>
-							<div class="case-shot">Screenshot coming soon</div>
 						</div>
 					</article>
 
-					<article class="case-card animate-box">
-						<span class="case-tag">Manufacturing · Current role</span>
-						<h3>Power BI for the BOD</h3>
-						<div class="case-actions">
-							<button type="button" class="case-toggle js-toggle" aria-expanded="false" aria-controls="case-2">Read more</button>
-						</div>
-						<div class="case-body" id="case-2" hidden>
+					<article class="card work-card reveal">
+						<p class="work-tag">Manufacturing · Current role</p>
+						<h3 class="card-title">Power BI for the BOD</h3>
+						<p class="work-result">12× faster data refresh</p>
+						<p class="work-tools">Power BI · Power Query · DAX · REST API · Power Automate</p>
+						<button type="button" class="details-toggle js-toggle" aria-expanded="false" aria-controls="work-2">Details</button>
+						<div class="work-details" id="work-2" hidden>
 							<h4>Challenge</h4>
 							<p>Management needed sales, purchasing and production figures without waiting for manual Excel reports.</p>
-							<h4>What I did</h4>
-							<ul class="case-list">
+							<h4>What was done</h4>
+							<ul class="bullets">
 								<li>Defined KPIs and reporting rules directly with the BOD and department managers.</li>
 								<li>Guided an intern to connect Power BI to the ERP via REST API, then took over and re-engineered the sales, purchasing and production dashboards.</li>
 								<li>Added order intake, order book and book-to-bill KPIs for the BOD.</li>
 								<li>Automated email delivery of the dashboards with Power Automate.</li>
 							</ul>
 							<h4>Result</h4>
-							<ul class="case-list">
+							<ul class="bullets">
 								<li>Data refresh cut from 3 minutes to 15 seconds.</li>
 								<li>Viewers need no Power BI Premium Per User license (USD 24 per user per month).</li>
 							</ul>
-							<h4>Tools</h4>
-							<ul class="chips chips-sm">
-								<li>Power BI</li><li>Power Query</li><li>DAX</li><li>REST API</li><li>Power Automate</li>
-							</ul>
-							<div class="case-shot">Screenshot coming soon</div>
 						</div>
 					</article>
 
-					<article class="case-card animate-box">
-						<span class="case-tag">Manufacturing · Current role</span>
-						<h3>Internal app platform on Power Platform</h3>
-						<div class="case-actions">
-							<button type="button" class="case-toggle js-toggle" aria-expanded="false" aria-controls="case-3">Read more</button>
-						</div>
-						<div class="case-body" id="case-3" hidden>
+					<article class="card work-card reveal">
+						<p class="work-tag">Manufacturing · Current role</p>
+						<h3 class="card-title">Internal app platform on Power Platform</h3>
+						<p class="work-result">7 modules live, built 4× faster with AI</p>
+						<p class="work-tools">Power Apps · Power Automate · SharePoint · Teams</p>
+						<button type="button" class="details-toggle js-toggle" aria-expanded="false" aria-controls="work-3">Details</button>
+						<div class="work-details" id="work-3" hidden>
 							<h4>Challenge</h4>
 							<p>Approvals and quality processes ran on paper forms, hand signatures and Excel files.</p>
-							<h4>What I did</h4>
-							<ul class="case-list">
+							<h4>What was done</h4>
+							<ul class="bullets">
 								<li>Learned Power Platform independently and designed one internal Power Apps platform.</li>
 								<li>Launched approval workflows (leave, business trip, IT handover) via Teams and Outlook.</li>
 								<li>Launched quality workflows (8D, CAPA, audit NCR) with action logs and auto-archived PDFs for audits.</li>
 								<li>Launched calibration and IT asset management with automatic alerts.</li>
 							</ul>
 							<h4>Result</h4>
-							<ul class="case-list">
+							<ul class="bullets">
 								<li>7 modules live, each with UAT, user guide and improvement report.</li>
 								<li>App delivery time cut from 4 weeks to 1 week by using AI without Copilot licenses.</li>
 							</ul>
-							<h4>Tools</h4>
-							<ul class="chips chips-sm">
-								<li>Power Apps</li><li>Power Automate</li><li>SharePoint</li><li>Approvals</li><li>Teams</li>
-							</ul>
-							<div class="case-shot">Screenshot coming soon</div>
 						</div>
 					</article>
 
-					<article class="case-card animate-box">
-						<span class="case-tag">Manufacturing · Previous role</span>
-						<h3>ERP migration and maintenance integration</h3>
-						<div class="case-actions">
-							<button type="button" class="case-toggle js-toggle" aria-expanded="false" aria-controls="case-4">Read more</button>
-						</div>
-						<div class="case-body" id="case-4" hidden>
+					<article class="card work-card reveal">
+						<p class="work-tag">Manufacturing · Previous role</p>
+						<h3 class="card-title">ERP migration and maintenance integration</h3>
+						<p class="work-result">About 70 users moved to a new ERP</p>
+						<p class="work-tools">ERP · MES · IoT data · Barcode / QR · SQL</p>
+						<button type="button" class="details-toggle js-toggle" aria-expanded="false" aria-controls="work-4">Details</button>
+						<div class="work-details" id="work-4" hidden>
 							<h4>Challenge</h4>
 							<p>Production, warehouse and costing ran on a legacy system, Excel and paper.</p>
-							<h4>What I did</h4>
-							<ul class="case-list">
+							<h4>What was done</h4>
+							<ul class="bullets">
 								<li>Migrated 8 functions from a legacy system and Excel to a new ERP, through go-live and post-go-live support.</li>
 								<li>Designed the rules that create production orders and purchase requests automatically from demand and stock.</li>
 								<li>Defined the data model and migration rules for multi-level BOMs and warehouse stock.</li>
@@ -220,315 +178,151 @@
 								<li>Rolled out barcode and QR scanning for real-time warehouse stock.</li>
 							</ul>
 							<h4>Result</h4>
-							<ul class="case-list">
+							<ul class="bullets">
 								<li>About 70 users live on the new ERP.</li>
 								<li>Machine time feeds product costing.</li>
 							</ul>
-							<h4>Tools</h4>
-							<ul class="chips chips-sm">
-								<li>ERP</li><li>MES</li><li>IoT data</li><li>Barcode / QR</li><li>SQL</li><li>Postman</li>
-							</ul>
-							<div class="case-shot">Screenshot coming soon</div>
-						</div>
-					</article>
-
-					<article class="case-card animate-box">
-						<span class="case-tag">Freelance · 2026</span>
-						<h3>Operations management system</h3>
-						<div class="case-actions">
-							<button type="button" class="case-toggle js-toggle" aria-expanded="false" aria-controls="case-5">Read more</button>
-							<a class="btn-code" href="https://github.com/stevenphung60-rgb/business-minierp-demo" target="_blank" rel="noopener"><i class="icon-github" aria-hidden="true"></i> Code (demo)</a>
-						</div>
-						<div class="case-body" id="case-5" hidden>
-							<h4>Challenge</h4>
-							<p>A 10-person manufacturing and installation business tracked projects, purchasing, stock and cash in separate records.</p>
-							<h4>What I did</h4>
-							<ul class="case-list">
-								<li>Gathered requirements from every department and wrote the BRD and FRS.</li>
-								<li>Designed the system structure and directed AI-assisted development of a web app on .NET, Angular and PostgreSQL.</li>
-								<li>Rolled out the system department by department with UAT and user guides.</li>
-							</ul>
-							<h4>Result</h4>
-							<ul class="case-list">
-								<li>Go-live completed in Sep 2026.</li>
-							</ul>
-							<h4>Tools</h4>
-							<ul class="chips chips-sm">
-								<li>.NET</li><li>Angular</li><li>PostgreSQL</li><li>Role-based permissions</li><li>AI-assisted development</li>
-							</ul>
-							<div class="case-shot">Screenshot coming soon</div>
-						</div>
-					</article>
-
-					<article class="case-card animate-box">
-						<span class="case-tag">Freelance · 2026</span>
-						<h3>Multilingual company website</h3>
-						<div class="case-actions">
-							<button type="button" class="case-toggle js-toggle" aria-expanded="false" aria-controls="case-6">Read more</button>
-							<a class="btn-code" href="https://github.com/stevenphung60-rgb/business-website-demo" target="_blank" rel="noopener"><i class="icon-github" aria-hidden="true"></i> Code (demo)</a>
-						</div>
-						<div class="case-body" id="case-6" hidden>
-							<h4>Challenge</h4>
-							<p>The same business needed a multilingual website its staff could update themselves.</p>
-							<h4>What I did</h4>
-							<ul class="case-list">
-								<li>Designed and directed AI-assisted development of a multilingual website with an admin panel for products, services and projects.</li>
-							</ul>
-							<h4>Result</h4>
-							<ul class="case-list">
-								<li>Ready for launch.</li>
-							</ul>
-							<h4>Tools</h4>
-							<ul class="chips chips-sm">
-								<li>Next.js</li><li>TypeScript</li><li>MongoDB</li><li>AI-assisted development</li>
-							</ul>
-							<div class="case-shot">Screenshot coming soon</div>
 						</div>
 					</article>
 
 				</div>
-			</div>
-		</section>
 
-		<!-- 5) RESULTS (text values, no counter animation) -->
-		<section id="results" class="colorlib-results" data-section="results">
-			<div class="colorlib-narrow-content">
-				<div class="results-grid">
-					<div class="result animate-box">
-						<span class="result-value"><span class="nowrap">4 weeks</span> <span class="nowrap">→ 1 week</span></span>
-						<span class="result-label">App delivery time using AI</span>
+				<div class="delivery reveal">
+					<h3 class="delivery-title">How the work is delivered</h3>
+					<ol class="steps">
+						<li><span class="step-num">1</span><span class="step-name">Requirements &amp; scope</span></li>
+						<li><span class="step-num">2</span><span class="step-name">Data design</span></li>
+						<li><span class="step-num">3</span><span class="step-name">Build <span class="nowrap">(AI-assisted)</span></span></li>
+						<li><span class="step-num">4</span><span class="step-name">UAT &amp; go-live</span></li>
+						<li><span class="step-num">5</span><span class="step-name">User guide &amp; report</span></li>
+					</ol>
+				</div>
+
+				<div class="duo-grid">
+					<div class="card card-sm reveal">
+						<h3 class="card-title">Business analysis &amp; project management</h3>
+						<p>Requirements meetings with managers and the BOD, scope agreement, delivery planning and tracking, progress reports to management.</p>
 					</div>
-					<div class="result animate-box">
-						<span class="result-value"><span class="nowrap">3 min</span> <span class="nowrap">→ 15 s</span></span>
-						<span class="result-label">Power BI data refresh time</span>
-					</div>
-					<div class="result animate-box">
-						<span class="result-value">7 modules</span>
-						<span class="result-label">Power Apps modules taken live</span>
-					</div>
-					<div class="result animate-box">
-						<span class="result-value">70 users</span>
-						<span class="result-label">Moved from a legacy system to a new ERP</span>
+					<div class="card card-sm reveal">
+						<h3 class="card-title">AI-assisted delivery</h3>
+						<p>Project rules, agent skills and prompting guides so AI builds to a defined structure, then review and testing of the output.</p>
 					</div>
 				</div>
 			</div>
 		</section>
 
-		<!-- 6) HOW I WORK -->
-		<section id="how-i-work" class="colorlib-section colorlib-process" data-section="how-i-work">
-			<div class="colorlib-narrow-content">
-				<div class="animate-box">
-					<span class="heading-meta">Process</span>
-					<h2 class="colorlib-heading">How I Work</h2>
+		<!-- PROJECTS (cards are rendered by js/main.js from the projects array) -->
+		<section id="projects" class="section" data-section="projects">
+			<div class="container">
+				<div class="section-head reveal">
+					<p class="section-label">Projects</p>
+					<h2 class="section-title">Projects</h2>
 				</div>
-				<ol class="steps animate-box">
-					<li><span class="step-num">1</span><span class="step-name">Requirements</span></li>
-					<li><span class="step-num">2</span><span class="step-name">Proposal &amp; scope</span></li>
-					<li><span class="step-num">3</span><span class="step-name">Data design</span></li>
-					<li><span class="step-num">4</span><span class="step-name">Build <span class="nowrap">(AI-assisted)</span></span></li>
-					<li><span class="step-num">5</span><span class="step-name">UAT</span></li>
-					<li><span class="step-num">6</span><span class="step-name">Go-live</span></li>
-					<li><span class="step-num">7</span><span class="step-name">User guide</span></li>
-					<li><span class="step-num">8</span><span class="step-name">Improvement report</span></li>
+				<div class="project-list js-project-list"></div>
+			</div>
+		</section>
+
+		<!-- EXPERIENCE -->
+		<section id="experience" class="section" data-section="experience">
+			<div class="container">
+				<div class="section-head reveal">
+					<p class="section-label">Experience</p>
+					<h2 class="section-title">Experience</h2>
+				</div>
+
+				<ol class="timeline">
+					<li class="timeline-item reveal">
+						<h3 class="role-title">IT Manufacturing Analyst</h3>
+						<p class="role-meta">APVN Sealing Co., Ltd. · Oct 2025 - Present</p>
+						<ul class="bullets">
+							<li>Analyze ERP processes across Sales, Purchasing, Production, Quality, Warehouse, Logistics and Accounting to define the reports, alerts and system rules each department needs.</li>
+							<li>Define Power BI KPIs and reporting rules directly with the BOD and department managers.</li>
+							<li>Learned Power Platform independently, designed an internal Power Apps platform and took 7 modules live.</li>
+						</ul>
+					</li>
+					<li class="timeline-item reveal">
+						<h3 class="role-title">Business Analyst</h3>
+						<p class="role-meta">Freelance · Mar 2026 - Sep 2026</p>
+						<ul class="bullets">
+							<li>Gathered requirements from every department of a 10-person manufacturing and installation business and wrote the BRD and FRS.</li>
+							<li>Rolled out the system department by department with UAT and user guides, and completed go-live in Sep 2026.</li>
+							<li>Designed and directed the AI-assisted development of a multilingual company website with an admin panel, ready for launch.</li>
+						</ul>
+					</li>
+					<li class="timeline-item reveal">
+						<h3 class="role-title">IT Staff - System Analyst</h3>
+						<p class="role-meta">SMC Manufacturing (Vietnam) Co., Ltd. · Dec 2023 - Oct 2025</p>
+						<ul class="bullets">
+							<li>Migrated 8 functions and about 70 users from a legacy system and Excel to a new ERP, through go-live and post-go-live support.</li>
+							<li>Took a maintenance system for 600+ equipment (about 20 IoT machines) live and integrated it with the ERP, feeding machine time into product costing.</li>
+							<li>Rolled out barcode and QR scanning for real-time warehouse stock, and 9 online approval workflows for about 100 users.</li>
+						</ul>
+					</li>
+					<li class="timeline-item reveal">
+						<h3 class="role-title">Business Analyst</h3>
+						<p class="role-meta">Reputyze Asia · Jul 2022 - Jul 2023</p>
+						<ul class="bullets">
+							<li>Led a team of 4 business analysts for 8 months.</li>
+							<li>Contributed to winning website and LMS contracts through client analysis, proposals and presentations.</li>
+						</ul>
+					</li>
 				</ol>
-				<div class="process-cards">
-					<div class="process-card animate-box">
-						<h3>Business analysis &amp; project management</h3>
-						<p>I run requirements meetings with managers and the BOD, agree scope, plan and track delivery, and report progress to management.</p>
-					</div>
-					<div class="process-card animate-box">
-						<h3>AI-assisted delivery</h3>
-						<p>I set up project rules, agent skills and prompting guides so AI builds to a defined structure, then review and test the output.</p>
-					</div>
-				</div>
-			</div>
-		</section>
 
-		<!-- 7) SKILLS -->
-		<section id="skills" class="colorlib-section colorlib-skills" data-section="skills">
-			<div class="colorlib-narrow-content">
-				<div class="animate-box">
-					<span class="heading-meta">Skills</span>
-					<h2 class="colorlib-heading">What I Work With</h2>
-				</div>
+				<p class="education-line reveal">Bachelor of Information Technology · FPT Greenwich University · 2019 - 2023</p>
+
+				<h3 class="subsection-title reveal">Skills</h3>
 				<div class="skill-grid">
-					<div class="skill-group animate-box">
-						<h3>ERP</h3>
-						<ul class="chips">
-							<li>Sales, purchasing, inventory, production, costing and finance processes</li>
-							<li>ERP migration and integration</li>
-							<li>REST API reporting</li>
-							<li>MES</li>
-						</ul>
+					<div class="card card-sm reveal">
+						<h4 class="skill-title">ERP &amp; manufacturing</h4>
+						<p>Sales, purchasing, inventory, production, costing and finance processes · ERP migration and integration · REST API reporting · MES</p>
 					</div>
-					<div class="skill-group animate-box">
-						<h3>Power BI</h3>
-						<ul class="chips">
-							<li>Desktop</li><li>Service</li><li>Power Query</li><li>DAX</li><li>Data modelling</li>
-						</ul>
+					<div class="card card-sm reveal">
+						<h4 class="skill-title">Reporting &amp; apps</h4>
+						<p>Power BI (Power Query, DAX, data modelling) · Power Apps · Power Automate · SharePoint · SQL · Python</p>
 					</div>
-					<div class="skill-group animate-box">
-						<h3>Power Platform</h3>
-						<ul class="chips">
-							<li>Power Apps</li><li>Power Automate</li><li>SharePoint</li><li>Approvals</li>
-						</ul>
+					<div class="card card-sm reveal">
+						<h4 class="skill-title">Analysis &amp; delivery</h4>
+						<p>Requirements gathering · Process mapping · BRD and FRS · UAT · Planning and progress tracking · Stakeholder and vendor coordination · Team leading</p>
 					</div>
-					<div class="skill-group animate-box">
-						<h3>Data and testing</h3>
-						<ul class="chips">
-							<li>SQL</li><li>Python</li><li>Postman</li><li>JIRA</li><li>UAT</li>
-						</ul>
+					<div class="card card-sm reveal">
+						<h4 class="skill-title">AI-assisted development</h4>
+						<p>Claude · ChatGPT · Copilot · Project rules · Agent skills · Prompting guides</p>
 					</div>
-					<div class="skill-group animate-box">
-						<h3>Business analysis</h3>
-						<ul class="chips">
-							<li>Requirements gathering</li><li>Process mapping</li><li>BRD and FRS</li><li>User guides</li><li>User training</li>
-						</ul>
-					</div>
-					<div class="skill-group animate-box">
-						<h3>Project management</h3>
-						<ul class="chips">
-							<li>Scope</li><li>Planning</li><li>Progress tracking</li><li>Task management</li><li>Stakeholder and vendor coordination</li><li>Go-live</li><li>Team leading</li>
-						</ul>
-					</div>
-					<div class="skill-group animate-box">
-						<h3>AI-assisted development</h3>
-						<ul class="chips">
-							<li>Claude</li><li>ChatGPT</li><li>Copilot</li><li>Project rules</li><li>Agent skills</li><li>Prompting guides</li>
-						</ul>
-					</div>
-					<div class="skill-group animate-box">
-						<h3>Languages</h3>
-						<ul class="chips">
-							<li>English (intermediate)</li>
-						</ul>
+				</div>
+				<p class="languages-line reveal">Languages: English (intermediate)</p>
+			</div>
+		</section>
+
+		<!-- CONTACT -->
+		<section id="contact" class="section section-last" data-section="contact">
+			<div class="container">
+				<div class="section-head reveal">
+					<p class="section-label">Contact</p>
+					<h2 class="section-title">Contact</h2>
+				</div>
+				<div class="contact reveal">
+					<p class="contact-lead">Open to ERP, Power BI and business systems roles in Ho Chi Minh City.</p>
+					<p class="contact-email"><a href="mailto:sangphungsh2000@gmail.com">sangphungsh2000@gmail.com</a></p>
+					<p class="contact-location">Thu Duc, Ho Chi Minh City</p>
+					<div class="actions">
+						<a class="btn btn-primary" href="mailto:sangphungsh2000@gmail.com">Email</a>
+						<a class="btn btn-outline" href="cv.pdf" download>Download CV</a>
 					</div>
 				</div>
 			</div>
 		</section>
 
-		<!-- 8) EXPERIENCE -->
-		<section id="experience" class="colorlib-section colorlib-experience" data-section="experience">
-			<div class="colorlib-narrow-content">
-				<div class="animate-box">
-					<span class="heading-meta">Experience</span>
-					<h2 class="colorlib-heading">Work Experience</h2>
-				</div>
-				<div class="timeline-centered">
-
-					<article class="timeline-entry animate-box">
-						<div class="timeline-icon" aria-hidden="true"></div>
-						<div class="timeline-label">
-							<h3>IT Manufacturing Analyst</h3>
-							<span class="timeline-meta"><span>APVN Sealing Co., Ltd.</span><span>Oct 2025 - Present</span></span>
-							<ul>
-								<li>Analyze ERP processes across Sales, Purchasing, Production, Quality, Warehouse, Logistics and Accounting to define the reports, alerts and system rules each department needs.</li>
-								<li>Lead requirements meetings with managers and the BOD, agree scope, track delivery and report progress to the line manager.</li>
-								<li>Built 6 ERP reports in-house without database access, now in daily use with no vendor fee.</li>
-								<li>Define Power BI KPIs and reporting rules directly with the BOD and department managers.</li>
-								<li>Learned Power Platform independently, designed an internal Power Apps platform and took 7 modules live.</li>
-								<li>Cut app delivery time from 4 weeks to 1 week by using AI without Copilot licenses, and ran an AI workshop for office staff.</li>
-								<li>Lead MES acceptance testing with the supplier, coordinate ERP tickets with Group IT and support ERP users.</li>
-							</ul>
-						</div>
-					</article>
-
-					<article class="timeline-entry animate-box">
-						<div class="timeline-icon" aria-hidden="true"></div>
-						<div class="timeline-label">
-							<h3>Business Analyst</h3>
-							<span class="timeline-meta"><span>Freelance</span><span>Mar 2026 - Sep 2026</span></span>
-							<ul>
-								<li>Gathered requirements from every department of a 10-person manufacturing and installation business and wrote the BRD and FRS.</li>
-								<li>Designed and directed the AI-assisted development of an operations management web app on .NET, Angular and PostgreSQL.</li>
-								<li>Rolled out the system department by department with UAT and user guides, and completed go-live in Sep 2026.</li>
-								<li>Designed and directed the AI-assisted development of a multilingual company website (Next.js, MongoDB) with an admin panel, ready for launch.</li>
-							</ul>
-						</div>
-					</article>
-
-					<article class="timeline-entry animate-box">
-						<div class="timeline-icon" aria-hidden="true"></div>
-						<div class="timeline-label">
-							<h3>IT Staff - System Analyst</h3>
-							<span class="timeline-meta"><span>SMC Manufacturing (Vietnam) Co., Ltd.</span><span>Dec 2023 - Oct 2025</span></span>
-							<ul>
-								<li>Migrated 8 functions and about 70 users from a legacy system and Excel to a new ERP, through go-live and post-go-live support.</li>
-								<li>Designed the rules that create production orders and purchase requests automatically from demand and stock.</li>
-								<li>Took a maintenance system for 600+ equipment (about 20 IoT machines) live and integrated it with the ERP, feeding machine time into product costing.</li>
-								<li>Rolled out barcode and QR scanning for real-time warehouse stock, and 9 online approval workflows for about 100 users.</li>
-								<li>Managed task timelines, reported to the project leader, chaired cross-department meetings and guided 2 team members.</li>
-							</ul>
-						</div>
-					</article>
-
-					<article class="timeline-entry animate-box">
-						<div class="timeline-icon" aria-hidden="true"></div>
-						<div class="timeline-label">
-							<h3>Business Analyst</h3>
-							<span class="timeline-meta"><span>Reputyze Asia</span><span>Jul 2022 - Jul 2023</span></span>
-							<ul>
-								<li>Led a team of 4 business analysts for 8 months.</li>
-								<li>Contributed to winning website and LMS contracts through client analysis, proposals and presentations.</li>
-								<li>Delivered outsourced projects to go-live, including an HRM module for a manufacturer.</li>
-							</ul>
-						</div>
-					</article>
-
-					<div class="timeline-entry begin" aria-hidden="true">
-						<div class="timeline-icon"></div>
-					</div>
-
-				</div>
+		<footer class="site-footer">
+			<div class="container">
+				<span>&copy; 2026 Phung Tan Sang</span>
+				<!-- Template credit required by the CC BY 3.0 license -->
+				<a class="credit" href="https://colorlib.com" target="_blank" rel="noopener">Template by Colorlib</a>
 			</div>
-		</section>
-
-		<!-- 9) EDUCATION -->
-		<section id="education" class="colorlib-section colorlib-education" data-section="education">
-			<div class="colorlib-narrow-content">
-				<div class="animate-box">
-					<span class="heading-meta">Education</span>
-					<h2 class="colorlib-heading">Education</h2>
-				</div>
-				<div class="accordion animate-box">
-					<div class="panel">
-						<h3 class="panel-title">
-							<button type="button" class="panel-toggle js-toggle" aria-expanded="true" aria-controls="edu-1">Bachelor of Information Technology</button>
-						</h3>
-						<div class="panel-body" id="edu-1">
-							<p>FPT Greenwich University, 2019 - 2023</p>
-						</div>
-					</div>
-				</div>
-			</div>
-		</section>
-
-		<!-- 10) CONTACT -->
-		<section id="contact" class="colorlib-section colorlib-contact" data-section="contact">
-			<div class="colorlib-narrow-content">
-				<div class="animate-box">
-					<span class="heading-meta">Get in touch</span>
-					<h2 class="colorlib-heading">Contact</h2>
-				</div>
-				<p class="contact-lead animate-box">Open to ERP, Power BI and business systems roles in Ho Chi Minh City.</p>
-				<div class="contact-items">
-					<div class="colorlib-feature animate-box">
-						<div class="colorlib-icon"><i class="icon-mail" aria-hidden="true"></i></div>
-						<p><a href="mailto:sangphungsh2000@gmail.com">sangphungsh2000@gmail.com</a></p>
-					</div>
-					<div class="colorlib-feature animate-box">
-						<div class="colorlib-icon"><i class="icon-location" aria-hidden="true"></i></div>
-						<p>Thu Duc, Ho Chi Minh City</p>
-					</div>
-				</div>
-			</div>
-		</section>
+		</footer>
 
 	</main>
-</div>
 
 <script src="js/jquery.min.js"></script>
-<script src="js/jquery.waypoints.min.js"></script>
 <script src="js/main.js"></script>
 </body>
 </html>
