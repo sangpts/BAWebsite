@@ -3,6 +3,25 @@
 *	Layout and look based on a template by Colorlib (CC BY 3.0)
 * ======================================================= */
 
+:root {
+	--color-primary: #1E3A5F;          /* navy: headings, name, Results band background */
+	--color-accent: #B45309;           /* deep amber: buttons, links, active menu, icons */
+	--color-accent-hover: #92400E;     /* darker amber for hover */
+	--color-accent-bright: #D97706;    /* bright amber: decorative only (lines, dots, underline) */
+	--color-accent-soft: #FEF3C7;      /* light amber tint: chips, highlights */
+	--color-accent-soft-text: #92400E; /* text on the light amber tint */
+	--color-text: #1F2937;             /* body text */
+	--color-text-muted: #5B6573;       /* secondary text, labels, dates */
+	--color-bg: #F7F8FA;               /* page background */
+	--color-surface: #FFFFFF;          /* cards, sidebar */
+	--color-border: #E3E7ED;           /* borders, dividers */
+
+	--font: "Inter", system-ui, -apple-system, "Segoe UI", Arial, sans-serif;
+	--card-shadow: 0 1px 2px color-mix(in srgb, var(--color-primary) 6%, transparent),
+		0 12px 32px -16px color-mix(in srgb, var(--color-primary) 22%, transparent);
+	--aside-width: 300px;
+}
+
 @font-face {
 	font-family: 'icomoon';
 	src: url("../fonts/icomoon/icomoon.woff") format("woff"),
@@ -10,24 +29,6 @@
 	font-weight: normal;
 	font-style: normal;
 	font-display: block;
-}
-
-:root {
-	--accent: #2c98f0;
-	--accent-tint: #eaf4fe;
-	--accent-line: #cfe5fb;
-	--text: #4A5563;
-	--muted: #6B7280;
-	--heading: #1F2D3D;
-	--navy: #1F2D3D;
-	--aside-bg: #f2f3f7;
-	--hero-bg: #F7F8FA;
-	--panel-bg: #f2f3f7;
-	--border: #e3e6ec;
-	--card-shadow: 0 0 56px -8px rgba(0, 0, 0, 0.12);
-	--aside-width: 300px;
-	--font-body: "Quicksand", Arial, sans-serif;
-	--font-heading: "Playfair Display", Georgia, serif;
 }
 
 /* ---------- Icons (only the icomoon glyphs this page uses) ---------- */
@@ -63,26 +64,27 @@ html {
 
 body {
 	margin: 0;
-	background: #fff;
-	font-family: var(--font-body);
+	background: var(--color-bg);
+	font-family: var(--font);
 	font-weight: 400;
-	font-size: 16px;
-	line-height: 1.8;
-	color: var(--text);
+	font-size: 17px;
+	line-height: 1.7;
+	color: var(--color-text);
 	overflow-x: hidden;
+	-webkit-font-smoothing: antialiased;
 }
 
 a {
-	color: var(--accent);
+	color: var(--color-accent);
 	text-decoration: none;
 	transition: color 0.3s, background-color 0.3s, border-color 0.3s;
 }
 a:hover, a:focus {
-	color: var(--heading);
+	color: var(--color-accent-hover);
 }
 
 :focus-visible {
-	outline: 2px solid var(--accent);
+	outline: 2px solid var(--color-accent);
 	outline-offset: 3px;
 }
 
@@ -91,9 +93,9 @@ p {
 }
 
 h1, h2, h3, h4, h5, h6 {
-	color: var(--heading);
-	font-family: var(--font-heading);
-	font-weight: 400;
+	color: var(--color-primary);
+	font-family: inherit;
+	font-weight: 700;
 	margin: 0 0 30px;
 	line-height: 1.3;
 }
@@ -114,8 +116,8 @@ img {
 }
 
 ::selection {
-	color: #fff;
-	background: var(--accent);
+	color: var(--color-surface);
+	background: var(--color-accent);
 }
 
 .nowrap {
@@ -139,7 +141,8 @@ img {
 	overflow-y: auto;
 	z-index: 1001;
 	padding: 3em 20px 40px;
-	background: var(--aside-bg);
+	background: var(--color-surface);
+	box-shadow: inset -1px 0 0 var(--color-border);
 	text-align: center;
 	display: flex;
 	flex-direction: column;
@@ -153,7 +156,7 @@ img {
 	margin: 0 auto 30px;
 	border-radius: 50%;
 	overflow: hidden;
-	background: var(--accent);
+	background: var(--color-accent);
 }
 #colorlib-aside .author-img img {
 	position: absolute;
@@ -168,47 +171,46 @@ img {
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	color: #fff;
-	font-family: var(--font-heading);
+	color: var(--color-surface);
 	font-size: 48px;
 	font-weight: 700;
-	letter-spacing: 2px;
+	letter-spacing: 0.02em;
 }
 
 #colorlib-logo {
 	font-size: 22px;
 	font-weight: 700;
+	letter-spacing: -0.01em;
 	margin: 0 0 0.4em;
 }
 #colorlib-logo a {
-	color: var(--heading);
+	color: var(--color-primary);
 }
 
 #colorlib-aside .position {
 	display: block;
 	margin-bottom: 2em;
 	font-size: 12px;
+	font-weight: 600;
 	line-height: 1.6;
 	text-transform: uppercase;
-	letter-spacing: 1px;
-	color: var(--text);
+	letter-spacing: 0.08em;
+	color: var(--color-text-muted);
 }
 
 #colorlib-main-menu ul {
 	list-style: none;
 }
 #colorlib-main-menu li {
-	margin: 0 0 10px;
-	font-size: 12px;
+	margin: 0 0 6px;
+	font-size: 15px;
 	font-weight: 500;
-	text-transform: uppercase;
-	letter-spacing: 1px;
 }
 #colorlib-main-menu a {
 	position: relative;
 	display: inline-block;
 	padding: 4px 0;
-	color: var(--text);
+	color: var(--color-text-muted);
 }
 #colorlib-main-menu a::after {
 	content: "";
@@ -217,19 +219,17 @@ img {
 	right: 0;
 	bottom: 2px;
 	height: 1px;
-	background: var(--accent);
+	background: var(--color-accent-bright);
 	transform: scaleX(0);
 	transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
-#colorlib-main-menu a:hover {
-	color: var(--heading);
+#colorlib-main-menu a:hover,
+#colorlib-main-menu li.active a {
+	color: var(--color-accent);
 }
 #colorlib-main-menu a:hover::after,
 #colorlib-main-menu li.active a::after {
 	transform: scaleX(1);
-}
-#colorlib-main-menu li.active a {
-	color: var(--accent);
 }
 
 .colorlib-footer {
@@ -237,7 +237,7 @@ img {
 	padding-top: 2em;
 	font-size: 13px;
 	line-height: 1.7;
-	color: var(--muted);
+	color: var(--color-text-muted);
 }
 .colorlib-footer p {
 	margin: 0 0 0.3em;
@@ -261,10 +261,10 @@ img {
 	width: 44px;
 	height: 44px;
 	padding: 0;
-	border: 0;
+	border: 1px solid var(--color-border);
 	border-radius: 50%;
-	background: #fff;
-	box-shadow: 0 2px 12px rgba(31, 45, 61, 0.15);
+	background: var(--color-surface);
+	box-shadow: 0 2px 12px color-mix(in srgb, var(--color-primary) 15%, transparent);
 }
 .colorlib-nav-toggle i,
 .colorlib-nav-toggle i::before,
@@ -272,12 +272,12 @@ img {
 	position: absolute;
 	width: 20px;
 	height: 2px;
-	background: var(--heading);
+	background: var(--color-primary);
 	transition: transform 0.3s, background-color 0.3s;
 }
 .colorlib-nav-toggle i {
-	left: 12px;
-	top: 21px;
+	left: 11px;
+	top: 20px;
 }
 .colorlib-nav-toggle i::before,
 .colorlib-nav-toggle i::after {
@@ -305,21 +305,20 @@ img {
 
 .heading-meta {
 	display: block;
-	margin-bottom: 15px;
-	font-size: 11px;
-	font-weight: 500;
+	margin-bottom: 12px;
+	font-size: 12px;
+	font-weight: 600;
 	text-transform: uppercase;
-	letter-spacing: 5px;
-	color: var(--muted);
+	letter-spacing: 0.12em;
+	color: var(--color-accent);
 }
 
 .colorlib-heading {
-	font-size: 18px;
+	font-size: 32px;
 	font-weight: 700;
-	text-transform: uppercase;
-	letter-spacing: 5px;
-	line-height: 1.8;
-	margin-bottom: 2.5em;
+	letter-spacing: -0.01em;
+	line-height: 1.25;
+	margin-bottom: 1.5em;
 }
 
 .chips {
@@ -331,8 +330,8 @@ img {
 .chips li {
 	padding: 5px 14px;
 	border-radius: 999px;
-	background: var(--accent-tint);
-	color: var(--heading);
+	background: var(--color-accent-soft);
+	color: var(--color-accent-soft-text);
 	font-size: 14px;
 	font-weight: 500;
 	line-height: 1.5;
@@ -377,7 +376,7 @@ img {
 	min-height: 100dvh;
 	display: flex;
 	align-items: center;
-	background: var(--hero-bg);
+	background: var(--color-bg);
 }
 .hero-text {
 	padding: 2.5em 0;
@@ -385,17 +384,17 @@ img {
 }
 .hero-text h1 {
 	margin: 0 0 20px;
-	font-size: 60px;
-	line-height: 1.3;
+	font-size: 56px;
+	line-height: 1.15;
 	font-weight: 700;
+	letter-spacing: -0.02em;
 }
 .hero-text h2 {
 	margin: 0 0 30px;
-	font-family: var(--font-body);
 	font-size: 18px;
 	font-weight: 400;
 	line-height: 1.6;
-	color: var(--text);
+	color: var(--color-text-muted);
 }
 .hero-text p {
 	margin: 0;
@@ -405,21 +404,21 @@ img {
 	display: inline-flex;
 	align-items: center;
 	gap: 10px;
-	padding: 10px 18px;
-	font-size: 12px;
-	text-transform: uppercase;
-	letter-spacing: 2px;
-	line-height: 1.6;
+	padding: 11px 20px;
+	font-size: 15px;
+	font-weight: 500;
+	line-height: 1.5;
+	border-radius: 6px;
 }
 .btn-learn {
-	color: var(--heading);
-	border: 1px solid var(--heading);
-	background: transparent;
+	color: var(--color-surface);
+	border: 1px solid var(--color-accent);
+	background: var(--color-accent);
 }
 .btn-learn:hover, .btn-learn:focus {
-	color: #fff;
-	background: var(--accent);
-	border-color: var(--accent);
+	color: var(--color-surface);
+	background: var(--color-accent-hover);
+	border-color: var(--color-accent-hover);
 }
 
 /* ---------- 3) About ---------- */
@@ -435,21 +434,20 @@ img {
 }
 .about-card {
 	padding: 1.75em 1.5em;
-	background: #fff;
+	background: var(--color-surface);
+	border: 1px solid var(--color-border);
 	box-shadow: var(--card-shadow);
-	border-bottom: 2px solid var(--accent);
 }
 .about-icon {
 	display: block;
 	margin-bottom: 18px;
 	font-size: 32px;
-	color: var(--accent);
+	color: var(--color-accent);
 }
 .about-card h3 {
 	margin: 0;
-	font-family: var(--font-body);
-	font-size: 17px;
-	font-weight: 500;
+	font-size: 18px;
+	font-weight: 600;
 }
 
 /* ---------- 4) Case studies ---------- */
@@ -461,25 +459,25 @@ img {
 }
 .case-card {
 	padding: 1.75em 1.75em 1.5em;
-	background: #fff;
+	background: var(--color-surface);
+	border: 1px solid var(--color-border);
 	box-shadow: var(--card-shadow);
-	border-bottom: 2px solid var(--accent);
 }
 .case-tag {
 	display: inline-block;
 	margin-bottom: 14px;
 	padding: 2px 10px;
 	border-radius: 999px;
-	background: var(--accent-tint);
-	color: var(--heading);
+	background: var(--color-accent-soft);
+	color: var(--color-accent-soft-text);
 	font-size: 12px;
 	font-weight: 600;
-	letter-spacing: 0.5px;
 }
 .case-card > h3 {
 	margin: 0 0 1em;
-	font-size: 21px;
-	font-weight: 700;
+	font-size: 20px;
+	font-weight: 600;
+	letter-spacing: -0.01em;
 }
 
 .case-actions {
@@ -495,11 +493,9 @@ img {
 	padding: 6px 0;
 	border: 0;
 	background: none;
-	color: var(--accent);
-	font-size: 13px;
-	font-weight: 600;
-	text-transform: uppercase;
-	letter-spacing: 1.5px;
+	color: var(--color-accent);
+	font-size: 14px;
+	font-weight: 500;
 }
 .case-toggle::after {
 	content: "";
@@ -516,7 +512,7 @@ img {
 	transform: rotate(-135deg);
 }
 .case-toggle:hover {
-	color: var(--heading);
+	color: var(--color-accent-hover);
 }
 
 .btn-code {
@@ -524,17 +520,16 @@ img {
 	align-items: center;
 	gap: 8px;
 	padding: 5px 14px;
-	border: 1px solid var(--heading);
-	color: var(--heading);
-	font-size: 12px;
-	font-weight: 600;
-	text-transform: uppercase;
-	letter-spacing: 1.5px;
+	border: 1px solid var(--color-accent);
+	border-radius: 6px;
+	color: var(--color-accent);
+	font-size: 14px;
+	font-weight: 500;
 }
 .btn-code:hover, .btn-code:focus {
-	color: #fff;
-	background: var(--accent);
-	border-color: var(--accent);
+	color: var(--color-accent-hover);
+	border-color: var(--color-accent-hover);
+	background: var(--color-accent-soft);
 }
 .btn-code .icon-github {
 	font-size: 15px;
@@ -543,15 +538,15 @@ img {
 .case-body {
 	margin-top: 1.25em;
 	padding-top: 0.25em;
-	border-top: 1px solid var(--border);
+	border-top: 1px solid var(--color-border);
 }
 .case-body h4 {
 	margin: 1.25em 0 0.5em;
-	font-family: var(--font-body);
 	font-size: 12px;
-	font-weight: 700;
+	font-weight: 600;
 	text-transform: uppercase;
-	letter-spacing: 2px;
+	letter-spacing: 0.12em;
+	color: var(--color-text-muted);
 }
 .case-body p {
 	margin-bottom: 0;
@@ -576,7 +571,7 @@ img {
 	width: 6px;
 	height: 6px;
 	border-radius: 50%;
-	background: var(--accent);
+	background: var(--color-accent-bright);
 }
 
 .case-shot {
@@ -585,19 +580,20 @@ img {
 	justify-content: center;
 	aspect-ratio: 16 / 9;
 	margin-top: 1.5em;
-	border: 1px dashed #cbd1da;
-	background: var(--panel-bg);
-	color: var(--muted);
-	font-size: 13px;
-	letter-spacing: 1px;
+	border: 1px dashed var(--color-border);
+	background: var(--color-bg);
+	color: var(--color-text-muted);
+	font-size: 12px;
+	font-weight: 600;
+	letter-spacing: 0.12em;
 	text-transform: uppercase;
 }
 
 /* ---------- 5) Results ---------- */
 .colorlib-results {
 	padding: 5em 0;
-	background: var(--navy);
-	color: #fff;
+	background: var(--color-primary);
+	color: var(--color-surface);
 }
 .results-grid {
 	display: grid;
@@ -608,19 +604,30 @@ img {
 .result-value {
 	display: block;
 	margin-bottom: 10px;
-	font-family: var(--font-heading);
 	font-size: 30px;
 	font-weight: 700;
-	line-height: 1.3;
-	color: #fff;
+	line-height: 1.25;
+	letter-spacing: -0.02em;
+	color: var(--color-surface);
+}
+/* Short amber line above each value */
+.result-value::before {
+	content: "";
+	display: block;
+	width: 32px;
+	height: 3px;
+	margin: 0 auto 16px;
+	border-radius: 2px;
+	background: var(--color-accent-bright);
 }
 .result-label {
 	display: block;
 	font-size: 13px;
+	font-weight: 500;
 	line-height: 1.6;
 	text-transform: uppercase;
-	letter-spacing: 1px;
-	color: rgba(255, 255, 255, 0.82);
+	letter-spacing: 0.06em;
+	color: color-mix(in srgb, var(--color-surface) 80%, transparent);
 }
 
 /* ---------- 6) How I work ---------- */
@@ -631,7 +638,6 @@ img {
 	grid-template-columns: repeat(8, minmax(0, 1fr));
 	gap: 8px;
 	margin-bottom: 3em;
-	counter-reset: none;
 }
 /* Connector line through the centre of the step circles */
 .steps::before {
@@ -641,7 +647,7 @@ img {
 	left: 6.25%;
 	right: 6.25%;
 	height: 2px;
-	background: var(--accent-line);
+	background: var(--color-border);
 }
 .steps li {
 	position: relative;
@@ -658,12 +664,10 @@ img {
 	height: 40px;
 	margin-bottom: 12px;
 	border-radius: 50%;
-	border: 2px solid var(--accent);
-	background: #fff;
-	color: var(--accent);
-	font-family: var(--font-heading);
+	background: var(--color-accent);
+	color: var(--color-surface);
 	font-weight: 700;
-	font-size: 16px;
+	font-size: 15px;
 	position: relative;
 	z-index: 1;
 }
@@ -671,7 +675,7 @@ img {
 	font-size: 14px;
 	font-weight: 600;
 	line-height: 1.4;
-	color: var(--heading);
+	color: var(--color-primary);
 }
 
 .process-cards {
@@ -681,14 +685,15 @@ img {
 }
 .process-card {
 	padding: 1.75em;
-	background: #fff;
+	background: var(--color-surface);
+	border: 1px solid var(--color-border);
 	box-shadow: var(--card-shadow);
-	border-bottom: 2px solid var(--accent);
 }
 .process-card h3 {
 	margin-bottom: 0.75em;
 	font-size: 20px;
-	font-weight: 700;
+	font-weight: 600;
+	letter-spacing: -0.01em;
 }
 .process-card p {
 	margin: 0;
@@ -702,11 +707,10 @@ img {
 }
 .skill-group h3 {
 	margin: 0 0 14px;
-	font-family: var(--font-body);
 	font-size: 13px;
-	font-weight: 700;
+	font-weight: 600;
 	text-transform: uppercase;
-	letter-spacing: 2px;
+	letter-spacing: 0.12em;
 }
 
 /* ---------- 8) Experience timeline ---------- */
@@ -720,7 +724,7 @@ img {
 	bottom: 0;
 	left: 19px;
 	width: 2px;
-	background: var(--accent-line);
+	background: var(--color-border);
 }
 .timeline-entry {
 	position: relative;
@@ -734,34 +738,36 @@ img {
 	width: 20px;
 	height: 20px;
 	border-radius: 50%;
-	background: var(--accent);
-	box-shadow: 0 0 0 5px var(--accent-tint);
+	background: var(--color-accent);
+	box-shadow: 0 0 0 5px var(--color-accent-soft);
 }
 .timeline-label {
 	padding: 1.5em 2em;
-	background: var(--panel-bg);
+	background: var(--color-surface);
+	border: 1px solid var(--color-border);
+	box-shadow: var(--card-shadow);
 }
 .timeline-label h3 {
 	margin: 0 0 4px;
-	font-family: var(--font-body);
 	font-size: 20px;
 	font-weight: 600;
+	letter-spacing: -0.01em;
 }
 .timeline-meta {
 	display: flex;
 	flex-wrap: wrap;
 	gap: 2px 12px;
 	margin-bottom: 1em;
-	font-size: 14px;
-	color: var(--muted);
+	font-size: 15px;
+	color: var(--color-text-muted);
 }
 .timeline-meta span:first-child {
 	font-weight: 600;
-	color: var(--text);
+	color: var(--color-text);
 }
 .timeline-meta span + span {
 	padding-left: 12px;
-	border-left: 1px solid #c4cad3;
+	border-left: 1px solid var(--color-border);
 }
 .timeline-entry.begin {
 	margin-bottom: 0;
@@ -769,18 +775,18 @@ img {
 }
 .timeline-entry.begin .timeline-icon {
 	top: 0;
-	background: #fff;
-	border: 2px solid var(--accent);
+	background: var(--color-surface);
+	border: 2px solid var(--color-accent);
 	box-shadow: none;
 }
 
 /* ---------- 9) Education accordion ---------- */
 .panel {
-	border: 1px solid var(--border);
+	border: 1px solid var(--color-border);
+	background: var(--color-surface);
 }
 .panel-title {
 	margin: 0;
-	font-family: var(--font-body);
 }
 .panel-toggle {
 	position: relative;
@@ -789,18 +795,11 @@ img {
 	padding: 20px 56px 20px 25px;
 	border: 0;
 	text-align: left;
-	font-size: 14px;
+	font-size: 18px;
 	font-weight: 600;
-	text-transform: uppercase;
-	letter-spacing: 1px;
-	line-height: 1.6;
-	background: var(--panel-bg);
-	color: var(--heading);
-	transition: background-color 0.3s, color 0.3s;
-}
-.panel-toggle[aria-expanded="true"] {
-	background: var(--accent);
-	color: #fff;
+	line-height: 1.5;
+	background: var(--color-accent-soft);
+	color: var(--color-primary);
 }
 /* Plus / minus sign */
 .panel-toggle::before,
@@ -812,7 +811,7 @@ img {
 	width: 14px;
 	height: 2px;
 	margin-top: -1px;
-	background: currentColor;
+	background: var(--color-accent);
 	transition: transform 0.3s;
 }
 .panel-toggle::after {
@@ -850,8 +849,9 @@ img {
 	justify-content: center;
 	width: 80px;
 	height: 80px;
-	background: var(--panel-bg);
-	color: var(--accent);
+	background: var(--color-surface);
+	border: 1px solid var(--color-border);
+	color: var(--color-accent);
 	font-size: 30px;
 }
 .colorlib-feature p {
@@ -907,21 +907,20 @@ img {
 		width: min(var(--aside-width), 85vw);
 		padding-top: 4.5em;
 		transform: translateX(-100%);
-		box-shadow: none;
 	}
 	body.offcanvas {
 		overflow: hidden;
 	}
 	body.offcanvas #colorlib-aside {
 		transform: translateX(0);
-		box-shadow: 4px 0 30px rgba(31, 45, 61, 0.18);
+		box-shadow: 4px 0 30px color-mix(in srgb, var(--color-primary) 18%, transparent);
 	}
 	body.offcanvas .aside-backdrop {
 		display: block;
 		position: fixed;
 		inset: 0;
 		z-index: 1000;
-		background: rgba(31, 45, 61, 0.35);
+		background: color-mix(in srgb, var(--color-primary) 35%, transparent);
 	}
 
 	.colorlib-nav-toggle {
@@ -939,7 +938,8 @@ img {
 		padding: 4em 0 4.5em;
 	}
 	.colorlib-heading {
-		margin-bottom: 2em;
+		font-size: 26px;
+		margin-bottom: 1.25em;
 	}
 
 	.colorlib-hero {
@@ -949,7 +949,7 @@ img {
 		text-align: center;
 	}
 	.hero-text h1 {
-		font-size: 42px;
+		font-size: 36px;
 	}
 	.hero-text .btn {
 		width: 100%;
@@ -970,9 +970,6 @@ img {
 	.about-card {
 		padding: 1.4em 1.1em;
 	}
-	.about-card h3 {
-		font-size: 15px;
-	}
 
 	.case-card {
 		padding: 1.5em 1.25em 1.25em;
@@ -992,7 +989,7 @@ img {
 		top: 24px;
 		width: 16px;
 		height: 16px;
-		box-shadow: 0 0 0 4px var(--accent-tint);
+		box-shadow: 0 0 0 4px var(--color-accent-soft);
 	}
 	.timeline-label {
 		padding: 1.25em;
